@@ -1,0 +1,354 @@
+@import "variables.less";
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+  margin-top: 60px;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  line-height: 60px;
+  height: 60px;
+  background-color: @dn-footer-bg;
+  color: @dn-footer-color;
+}
+
+.dn-img-thumbnail {
+    padding: 4px;
+    line-height: 1.42857143;
+    background-color: @dn-home-img-bg;
+    border: 15px solid @dn-home-img-border;
+    -webkit-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    max-width: 100%;
+    height: auto;
+}
+
+.dn-intro {
+    text-align: center;
+	color: @dn-home-intro-text;
+}
+
+.dn-intro-pic, .dn-intro-tag {
+	padding-top: 25px;
+	padding-bottom: 25px;
+}
+
+.dn-intro-text {
+    .dn-name {
+        display: block;
+        font-family: @dn-home-intro-font;
+        text-transform: uppercase;
+        font-weight: 700;
+        font-size: 2em;
+    }
+    .dn-skills {
+        font-size: 1.25em;
+        font-weight: 300;
+    }
+}
+
+@media(min-width:992px) {
+	.dn-intro-tag {
+        padding-top: 100px;
+        padding-bottom: 50px;
+    }
+    
+    .dn-intro-pic {
+        padding-top: 25px;
+        padding-bottom: 25px;
+    }
+    
+    .dn-intro-text {
+        .dn-name {
+            font-size: 2em;
+        }
+        .dn-skills {
+            font-size: 1.75em;
+        }
+    }
+}
+
+hr.dn-star-light {
+    padding: 0;
+    border: none;
+    border-top: solid 5px;
+    text-align: center;
+    max-width: 250px;
+    margin: 25px auto 30px;
+}
+
+hr.dn-star-light:after {
+    content: "\f005";
+    font-family: FontAwesome;
+    display: inline-block;
+    position: relative;
+    top: -0.8em;
+    font-size: 2em;
+    padding: 0 0.25em;
+}
+
+hr.dn-star-light {
+    border-color: @dn-home-intro-text;
+}
+
+hr.dn-star-light:after {
+    background-color: @dn-bg;
+    color: @dn-home-intro-text;
+}
+
+.dn-padding-r-10 {
+    padding-right: 10px;
+}
+
+.navbar-nav > li > a.dn-linkedin {
+    color: @dn-linkedin-color;
+    font-size: 20px;
+}
+
+.dn-experience {
+    color: @dn-color-text;
+    padding: 10px;
+}
+
+.dn-experience-even {
+    background: @dn-bg-alt;
+}
+
+.dn-experience-odd {
+    background: @dn-bg;
+}
+
+.dn-img-thumbnail-even {
+    background-color: @dn-bg;
+    border: 1px solid @dn-bg-alt;
+}
+
+.dn-img-thumbnail-odd {
+    background-color: @dn-bg-alt;
+    border: 1px solid @dn-bg;
+}
+
+h2 {
+    color: @dn-heading-color;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.dn-h3-even {
+    color: @dn-bg;
+    font-size: 18px;
+}
+
+.dn-h3-odd {
+    color: @dn-bg-alt;
+    font-size: 18px;
+}
+
+.dn-h4 {
+    color: @dn-heading-color;
+    font-size: 15px;
+}
+
+a.dn-link {
+    color: @dn-link;
+}
+
+.dn-link-icon {
+    color: @dn-link;
+}
+
+.dn-tag {
+    cursor: pointer;
+}
+
+.dn-tag-1, .dn-tag-icon-1 {
+    color: @dn-tag-color-1;
+    font-size: @dn-tag-size-1;
+}
+
+.dn-tag-2, .dn-tag-icon-2 {
+    color: @dn-tag-color-2;
+    font-size: @dn-tag-size-2;
+}
+
+.dn-tag-3, .dn-tag-icon-3 {
+    color: @dn-tag-color-3;
+    font-size: @dn-tag-size-3;
+}
+
+.dn-tag-4, .dn-tag-icon-4 {
+    color: @dn-tag-color-4;
+    font-size: @dn-tag-size-4;
+}
+
+.dn-tag-5, .dn-tag-icon-5 {
+    color: @dn-tag-color-5;
+    font-size: @dn-tag-size-5;
+}
+
+.dn-tag-6, .dn-tag-icon-6 {
+    color: @dn-tag-color-6;
+    font-size: @dn-tag-size-6;
+}
+
+.dn-tag-7, .dn-tag-icon-7 {
+    color: @dn-tag-color-7;
+    font-size: @dn-tag-size-7;
+}
+
+.dn-tag-8, .dn-tag-icon-8 {
+    color: @dn-tag-color-8;
+    font-size: @dn-tag-size-8;
+}
+
+.dn-tag-9, .dn-tag-icon-9 {
+    color: @dn-tag-color-9;
+    font-size: @dn-tag-size-9;
+}
+
+.dn-tag-10, .dn-tag-icon-10 {
+    color: @dn-tag-color-10;
+    font-size: @dn-tag-size-10;
+}
+
+.dn-panel {
+    border-color: @dn-panel-border;
+    background: @dn-panel-bg;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+}
+
+.dn-panel-heading {
+    background: @dn-panel-heading-bg;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+}
+
+.dn-panel-footer {
+    text-align: right;
+    background: @dn-panel-footer-bg;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+    border-color: @dn-panel-footer-border;
+}
+
+.dn-btn {
+    border-color: @dn-btn-border;
+    background: @dn-btn-bg;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+}
+
+.dn-img-icon-project {
+    width: 200px;
+}
+
+.dn-panel-body {
+    padding: 0;
+    margin: 0;
+}
+
+.dn-img-main-project {
+    width: 400px;
+}
+
+.dn-tag-well {
+    background: @dn-tag-cloud-bg;
+    border-color: @dn-tag-cloud-border;
+    margin: 10px;
+}
+
+.dn-lk-image {
+    width: 150px;
+    cursor: pointer;
+}
+
+.dn-gallery-items > li {
+    vertical-align: middle;
+}
+
+
+
+
+.dn-icons-lg {
+  font-size: 1.33333333em;
+  line-height: 0.75em;
+  vertical-align: -15%;
+}
+.dn-icons-2x {
+  font-size: 2em;
+}
+.dn-icons-3x {
+  font-size: 3em;
+}
+.dn-icons-4x {
+  font-size: 4em;
+}
+.dn-icons-5x {
+  font-size: 5em;
+}
+.dn-icons-10x {
+  font-size: 10em;
+}
+.dn-icons-fw {
+  width: 1.28571429em;
+  text-align: center;
+}
+
+/*
+.dn-tag-icon-1 { font-size: @dn-tag-size-1; }
+.dn-tag-icon-2 { font-size: @dn-tag-size-2; }
+.dn-tag-icon-3 { font-size: @dn-tag-size-3; }
+.dn-tag-icon-4 { font-size: @dn-tag-size-4; }
+.dn-tag-icon-5 { font-size: @dn-tag-size-5; }
+.dn-tag-icon-6 { font-size: @dn-tag-size-6; }
+.dn-tag-icon-7 { font-size: @dn-tag-size-7; }
+.dn-tag-icon-8 { font-size: @dn-tag-size-8; }
+.dn-tag-icon-9 { font-size: @dn-tag-size-9; }
+.dn-tag-icon-10 { font-size: @dn-tag-size-10; }
+*/
+
+.dn-font-text-alt {
+    color: @dn-color-text-alt;
+}
+
+.dn-modal-heading, .dn-modal-footer {
+    background: @dn-panel-heading-bg !important;
+    color: @dn-panel-bg !important;
+}
+
+.dn-modal-heading h2 {
+    color: @dn-panel-bg !important;
+}
+
+.dn-modal-body {
+    background: @dn-panel-bg;
+    color: @dn-panel-heading-bg;
+}
+
+@media (max-width: 767px) {
+    .text-right { text-align:center }
+}
+
+.dn-star {
+    color: @dn-star-color;
+    font-size: 3vw;
+}
+
+a.dn-btn-close {
+    color: @dn-close-color;
+    background: @dn-close-bg;
+}

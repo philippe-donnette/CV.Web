@@ -1,0 +1,19 @@
+<h1>{{ project.title }}</h1>
+
+<div class="row">
+    <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 text-center">
+        <img ng-src="images/projects/project-icon-{{ project.id }}.png" 
+                    class="img-responsive dn-img-main-project"
+                    alt="{{ project.title }}" title="{{ project.title }}" />
+    </div>
+    <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12" ng-bind-html="project.description">
+    </div>
+</div>    
+
+<div class="row">
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <dn-tag-cloud tags="project.tags" container="true"></dn-tag-cloud>
+    </div>
+</div>
+
+<dn-gallery images="project.images"></dn-gallery>

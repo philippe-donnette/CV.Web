@@ -1,0 +1,287 @@
+/*!
+ * Font Mfizz 2.2
+ * Copyright 2013-2015 Fizzed, Inc.
+ * MIT License
+ *
+ * Project: http://fizzed.com/oss/font-mfizz
+ *
+ * The font designed for technology and software geeks representing programming
+ * languages, operating systems, software engineering, and technology.
+ *
+ * Fizzed, Inc.
+ * Web: http://fizzed.com/
+ * Twitter: http://twitter.com/fizzed_inc
+ */
+
+@font-face {
+  font-family: "FontMfizz";
+  src: url("../fonts/font-mfizz.eot");
+  src: url("../fonts/font-mfizz.eot?#iefix") format("embedded-opentype"),
+       url("../fonts/font-mfizz.woff") format("woff"),
+       url("../fonts/font-mfizz.ttf") format("truetype"),
+       url("../fonts/font-mfizz.svg#font-mfizz") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: "FontMfizz";
+    src: url("./font-mfizz.svg#font-mfizz") format("svg");
+  }
+}
+
+[data-mfizz]:before { content: attr(data-mfizz); }
+
+[data-mfizz]:before,
+.mfizz-3dprint:before,
+.mfizz-antenna:before,
+.mfizz-apache:before,
+.mfizz-archlinux:before,
+.mfizz-aws:before,
+.mfizz-blackberry:before,
+.mfizz-bomb:before,
+.mfizz-c:before,
+.mfizz-cassandra:before,
+.mfizz-centos:before,
+.mfizz-clojure:before,
+.mfizz-coffee-bean:before,
+.mfizz-cplusplus:before,
+.mfizz-csharp:before,
+.mfizz-css:before,
+.mfizz-database:before,
+.mfizz-database-alt:before,
+.mfizz-database-alt2:before,
+.mfizz-debian:before,
+.mfizz-docker:before,
+.mfizz-dreamhost:before,
+.mfizz-elixir:before,
+.mfizz-erlang:before,
+.mfizz-exherbo:before,
+.mfizz-fedora:before,
+.mfizz-fire-alt:before,
+.mfizz-freebsd:before,
+.mfizz-gentoo:before,
+.mfizz-ghost:before,
+.mfizz-gnome:before,
+.mfizz-google:before,
+.mfizz-google-alt:before,
+.mfizz-google-code:before,
+.mfizz-google-developers:before,
+.mfizz-gradle:before,
+.mfizz-grails:before,
+.mfizz-grails-alt:before,
+.mfizz-hadoop:before,
+.mfizz-haskell:before,
+.mfizz-heroku:before,
+.mfizz-html:before,
+.mfizz-iphone:before,
+.mfizz-java:before,
+.mfizz-java-bold:before,
+.mfizz-java-duke:before,
+.mfizz-javascript:before,
+.mfizz-javascript-alt:before,
+.mfizz-jetty:before,
+.mfizz-kde:before,
+.mfizz-laravel:before,
+.mfizz-line-graph:before,
+.mfizz-linux-mint:before,
+.mfizz-looking:before,
+.mfizz-mariadb:before,
+.mfizz-maven:before,
+.mfizz-microscope:before,
+.mfizz-mobile-device:before,
+.mfizz-mobile-phone-alt:before,
+.mfizz-mobile-phone-broadcast:before,
+.mfizz-mongodb:before,
+.mfizz-mssql:before,
+.mfizz-mysql:before,
+.mfizz-mysql-alt:before,
+.mfizz-netbsd:before,
+.mfizz-nginx:before,
+.mfizz-nginx-alt:before,
+.mfizz-nginx-alt2:before,
+.mfizz-nodejs:before,
+.mfizz-objc:before,
+.mfizz-oracle:before,
+.mfizz-oracle-alt:before,
+.mfizz-osx:before,
+.mfizz-perl:before,
+.mfizz-phone-alt:before,
+.mfizz-phone-gap:before,
+.mfizz-phone-retro:before,
+.mfizz-php:before,
+.mfizz-php-alt:before,
+.mfizz-playframework:before,
+.mfizz-playframework-alt:before,
+.mfizz-plone:before,
+.mfizz-postgres:before,
+.mfizz-postgres-alt:before,
+.mfizz-python:before,
+.mfizz-raspberrypi:before,
+.mfizz-redhat:before,
+.mfizz-redis:before,
+.mfizz-ruby:before,
+.mfizz-ruby-on-rails:before,
+.mfizz-ruby-on-rails-alt:before,
+.mfizz-satellite:before,
+.mfizz-scala:before,
+.mfizz-scala-alt:before,
+.mfizz-script:before,
+.mfizz-script-alt:before,
+.mfizz-shell:before,
+.mfizz-solaris:before,
+.mfizz-splatter:before,
+.mfizz-suse:before,
+.mfizz-svg:before,
+.mfizz-symfony:before,
+.mfizz-tomcat:before,
+.mfizz-ubuntu:before,
+.mfizz-wireless:before,
+.mfizz-wordpress:before {
+  display: inline-block;
+  font-family: "FontMfizz";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  line-height: 1;
+  text-decoration: inherit;
+  text-rendering: optimizeLegibility;
+  text-transform: none;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+}
+
+.mfizz-3dprint:before { content: "\f100"; }
+.mfizz-antenna:before { content: "\f101"; }
+.mfizz-apache:before { content: "\f102"; }
+.mfizz-archlinux:before { content: "\f103"; }
+.mfizz-aws:before { content: "\f104"; }
+.mfizz-blackberry:before { content: "\f105"; }
+.mfizz-bomb:before { content: "\f106"; }
+.mfizz-c:before { content: "\f107"; }
+.mfizz-cassandra:before { content: "\f108"; }
+.mfizz-centos:before { content: "\f109"; }
+.mfizz-clojure:before { content: "\f10a"; }
+.mfizz-coffee-bean:before { content: "\f10b"; }
+.mfizz-cplusplus:before { content: "\f10c"; }
+.mfizz-csharp:before { content: "\f10d"; }
+.mfizz-css:before { content: "\f10e"; }
+.mfizz-database:before { content: "\f10f"; }
+.mfizz-database-alt:before { content: "\f110"; }
+.mfizz-database-alt2:before { content: "\f111"; }
+.mfizz-debian:before { content: "\f112"; }
+.mfizz-docker:before { content: "\f113"; }
+.mfizz-dreamhost:before { content: "\f114"; }
+.mfizz-elixir:before { content: "\f115"; }
+.mfizz-erlang:before { content: "\f116"; }
+.mfizz-exherbo:before { content: "\f117"; }
+.mfizz-fedora:before { content: "\f118"; }
+.mfizz-fire-alt:before { content: "\f119"; }
+.mfizz-freebsd:before { content: "\f11a"; }
+.mfizz-gentoo:before { content: "\f11b"; }
+.mfizz-ghost:before { content: "\f11c"; }
+.mfizz-gnome:before { content: "\f11d"; }
+.mfizz-google:before { content: "\f11e"; }
+.mfizz-google-alt:before { content: "\f11f"; }
+.mfizz-google-code:before { content: "\f120"; }
+.mfizz-google-developers:before { content: "\f121"; }
+.mfizz-gradle:before { content: "\f122"; }
+.mfizz-grails:before { content: "\f123"; }
+.mfizz-grails-alt:before { content: "\f124"; }
+.mfizz-hadoop:before { content: "\f125"; }
+.mfizz-haskell:before { content: "\f126"; }
+.mfizz-heroku:before { content: "\f127"; }
+.mfizz-html:before { content: "\f128"; }
+.mfizz-iphone:before { content: "\f129"; }
+.mfizz-java:before { content: "\f12a"; }
+.mfizz-java-bold:before { content: "\f12b"; }
+.mfizz-java-duke:before { content: "\f12c"; }
+.mfizz-javascript:before { content: "\f12d"; }
+.mfizz-javascript-alt:before { content: "\f12e"; }
+.mfizz-jetty:before { content: "\f12f"; }
+.mfizz-kde:before { content: "\f130"; }
+.mfizz-laravel:before { content: "\f131"; }
+.mfizz-line-graph:before { content: "\f132"; }
+.mfizz-linux-mint:before { content: "\f133"; }
+.mfizz-looking:before { content: "\f134"; }
+.mfizz-mariadb:before { content: "\f135"; }
+.mfizz-maven:before { content: "\f136"; }
+.mfizz-microscope:before { content: "\f137"; }
+.mfizz-mobile-device:before { content: "\f138"; }
+.mfizz-mobile-phone-alt:before { content: "\f139"; }
+.mfizz-mobile-phone-broadcast:before { content: "\f13a"; }
+.mfizz-mongodb:before { content: "\f13b"; }
+.mfizz-mssql:before { content: "\f13c"; }
+.mfizz-mysql:before { content: "\f13d"; }
+.mfizz-mysql-alt:before { content: "\f13e"; }
+.mfizz-netbsd:before { content: "\f13f"; }
+.mfizz-nginx:before { content: "\f140"; }
+.mfizz-nginx-alt:before { content: "\f141"; }
+.mfizz-nginx-alt2:before { content: "\f142"; }
+.mfizz-nodejs:before { content: "\f143"; }
+.mfizz-objc:before { content: "\f144"; }
+.mfizz-oracle:before { content: "\f145"; }
+.mfizz-oracle-alt:before { content: "\f146"; }
+.mfizz-osx:before { content: "\f147"; }
+.mfizz-perl:before { content: "\f148"; }
+.mfizz-phone-alt:before { content: "\f149"; }
+.mfizz-phone-gap:before { content: "\f14a"; }
+.mfizz-phone-retro:before { content: "\f14b"; }
+.mfizz-php:before { content: "\f14c"; }
+.mfizz-php-alt:before { content: "\f14d"; }
+.mfizz-playframework:before { content: "\f14e"; }
+.mfizz-playframework-alt:before { content: "\f14f"; }
+.mfizz-plone:before { content: "\f150"; }
+.mfizz-postgres:before { content: "\f151"; }
+.mfizz-postgres-alt:before { content: "\f152"; }
+.mfizz-python:before { content: "\f153"; }
+.mfizz-raspberrypi:before { content: "\f154"; }
+.mfizz-redhat:before { content: "\f155"; }
+.mfizz-redis:before { content: "\f156"; }
+.mfizz-ruby:before { content: "\f157"; }
+.mfizz-ruby-on-rails:before { content: "\f158"; }
+.mfizz-ruby-on-rails-alt:before { content: "\f159"; }
+.mfizz-satellite:before { content: "\f15a"; }
+.mfizz-scala:before { content: "\f15b"; }
+.mfizz-scala-alt:before { content: "\f15c"; }
+.mfizz-script:before { content: "\f15d"; }
+.mfizz-script-alt:before { content: "\f15e"; }
+.mfizz-shell:before { content: "\f15f"; }
+.mfizz-solaris:before { content: "\f160"; }
+.mfizz-splatter:before { content: "\f161"; }
+.mfizz-suse:before { content: "\f162"; }
+.mfizz-svg:before { content: "\f163"; }
+.mfizz-symfony:before { content: "\f164"; }
+.mfizz-tomcat:before { content: "\f165"; }
+.mfizz-ubuntu:before { content: "\f166"; }
+.mfizz-wireless:before { content: "\f167"; }
+.mfizz-wordpress:before { content: "\f168"; }
+
+
+
+
+
+
+.mfizz-lg {
+  font-size: 1.33333333em;
+  line-height: 0.75em;
+  vertical-align: -15%;
+}
+.mfizz-2x {
+  font-size: 2em;
+}
+.mfizz-3x {
+  font-size: 3em;
+}
+.mfizz-4x {
+  font-size: 4em;
+}
+.mfizz-5x {
+  font-size: 5em;
+}
+.mfizz-fw {
+  width: 1.28571429em;
+  text-align: center;
+}

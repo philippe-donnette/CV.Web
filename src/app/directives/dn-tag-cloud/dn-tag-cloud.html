@@ -1,0 +1,51 @@
+<ul class="list-inline" ng-class="{ 'well': container, 'dn-tag-well': container }">
+    <li ng-repeat="tag in tags" ng-click="openTag(tag)" 
+        class="dn-tag">
+        <i class="dn-tag-icon-{{ tag.weight }}" ng-class="tag.iconClass"></i><span class="dn-tag-{{ tag.weight }}">{{ tag.label }}</span>
+    </li>
+</ul>
+
+<script type="text/ng-template" id="dn-tag-cloud-modal.html">
+    <div class="panel-default">
+        <div class="panel-heading dn-modal-heading">
+            <div class="row">
+                <div class="col-lg-1 col-md-1 col-sm-1 col-xs-3 pull-right">
+                    <a class="btn btn-default dn-btn-close" ng-click="close()"><i class="fa fa-close"></i></a>
+                </div>
+                <div class="col-lg-11 col-md-11 col-sm-11 col-xs-9">
+                    <h2><i ng-class="tag.iconClass"></i> {{ tag.label }}</h2>
+                </div>
+            </div>
+        </div>
+        <div class="panel-body dn-modal-body">
+            <div class="row">
+                <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
+                    <ul class="list-unstyled">
+                        <li>Experience: <dn-rating max="10" rating="3"></dn-rating></li>
+                        <li>Current Usage: <dn-rating max="10" rating="6"></dn-rating></li>
+                        <li>Interest: <dn-rating max="10" rating="9"></dn-rating></li>
+                        <li>Version: 2005 Professional, 2010 Professional, 2015 Community</li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 text-right">
+                    <i class="dn-icons-10x" ng-class="tag.iconClass"></i>
+                </div>
+            </div>
+            <div class="well">
+                <p>Some text about me and this software or techno.... Some text about me and this software or techno....</p>
+                <p>Some text about me and this software or techno....</p>
+            </div>
+        </div>
+        <div class="panel-footer dn-modal-footer">
+            <div class="row">
+                <div class="col-lg-11 col-md-11 col-sm-11 col-xs-11">
+                    
+                </div>
+                <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
+                    <a ng-click="close()">X</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</script>
+

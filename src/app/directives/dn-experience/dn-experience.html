@@ -1,0 +1,39 @@
+<div class="row dn-experience" ng-repeat="job in jobs" ng-class-even="'dn-experience-even'" 
+    ng-class-odd="'dn-experience-odd'">
+    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+        <div class="text-center">
+            <h2 alt="{{ job.company }}" title="{{ job.company }}">{{ job.company }}</h2>
+        </div>
+        <div class="text-center">
+            <img ng-src="{{ job.logoImageSrc }}" class="img-thumbnail" ng-class-even="'dn-img-thumbnail-even'"
+                ng-class-odd="'dn-img-thumbnail-odd'" 
+                alt="{{ job.company }} logo" 
+                title="{{ job.company }} logo" />
+        </div>
+    </div>
+    <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
+        <div class="row">
+            <div class="col-lg-7 col-md-7 col-sm-7 col-xs-12">
+                <h3 ng-class-even="'dn-h3-even'" ng-class-odd="'dn-h3-odd'" alt="{{ job.role }}" title="{{ job.role }}">
+                    <i class="fa fa-black-tie"></i> {{ job.role }}
+                </h3>
+            </div>
+            <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12 text-right">
+                <h4 class="dn-h4">
+                    {{ job.startDate | date: 'MMM yyyy' }} - {{ job.endDate | date: 'MMM yyyy' }} <i class="fa fa-calendar"></i>
+                </h4>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">        
+                <p>{{ job.description }}</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-right">
+        <a ng-href="{{ job.link }}" class="dn-link">{{ job.link }}</a> <i class="fa fa-globe dn-link-icon"></i>
+    </div>
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
+        <dn-tag-cloud tags="job.tags" container="true"></dn-tag-cloud> 
+    </div>
+</div>

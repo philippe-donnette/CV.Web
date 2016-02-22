@@ -1,0 +1,17 @@
+<ul class="dn-projects list-inline">
+    <li ng-repeat="project in projects">
+        <div class="panel dn-panel">
+            <div class="panel-heading dn-panel-heading">
+                {{ project.title }}
+            </div>
+            <div class="panel-body dn-panel-body">
+                <img ng-src="images/projects/project-icon-{{ project.id }}.png" 
+                    class="img-responsive dn-img-icon-project"
+                    alt="{{ project.title }}" title="{{ project.title }}" />
+            </div>
+            <div class="panel-footer dn-panel-footer">
+                <a class="btn dn-link dn-btn" ui-sref="root.project({ title: project.title, id: project.id })">More <i class="glyphicon glyphicon-arrow-right"></i></a>
+            </div>
+        </div>
+    </li>
+</ul>    

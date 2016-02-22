@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html data-ng-app="dnApp">
+<head>
+    <!-- build:base -->
+    <base href="/CV.Web/src/">
+    <!-- endbuild -->
+    <title></title>
+    <meta charset="utf-8" />
+    <!-- build:cssbootstrap bootstrap.css -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+    <!-- endbuild -->
+    <!-- build:fonts fonts.css -->
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.css" />
+    <link rel="stylesheet" type="text/css" href="css/devicons.css" />
+    <link rel="stylesheet" type="text/css" href="css/font-mfizz.css" />
+    <!-- endbuild -->
+    <!-- build:csssite site.css -->
+    <link rel="stylesheet" type="text/css" href="css/site.css" />
+    <!-- endbuild -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+</head>
+<body ng-cloak>
+    
+    <header ui-view="header"></header>
+    <div class="container" ui-view="container"></div>
+    <footer ui-view="footer" class="footer"></footer>
+
+    <!-- build:libjs lib.js -->
+    <script src="scripts/angular.js"></script>
+    <script src="scripts/angular-sanitize.js"></script>
+    <script src="scripts/angular-ui-router.js"></script>
+    <script src="scripts/ui-bootstrap.js"></script>
+    <script src="scripts/ui-bootstrap-tpls.js"></script>
+    <!-- endbuild -->
+    
+    <!-- build:jsapp app.js -->
+    <script src="app/app.js"></script>
+    
+    <script src="app/controllers/headerController.js"></script>
+    <script src="app/controllers/footerController.js"></script>
+    <script src="app/controllers/homeController.js"></script>
+    <script src="app/controllers/aboutController.js"></script>
+    <script src="app/controllers/experienceController.js"></script>
+    <script src="app/controllers/projectsController.js"></script>
+    <script src="app/controllers/projectController.js"></script>
+    <script src="app/controllers/skillsController.js"></script>
+    
+    <script src="app/directives/dn-experience/dn-experience.js"></script>
+    <script src="app/directives/dn-tag-cloud/dn-tag-cloud.js"></script>
+    <script src="app/directives/dn-projects/dn-projects.js"></script>
+    <script src="app/directives/dn-project/dn-project.js"></script>
+    <script src="app/directives/dn-gallery/dn-gallery.js"></script>
+    <script src="app/directives/dn-rating/dn-rating.js"></script>
+    <!-- endbuild -->
+
+</body>
+</html>

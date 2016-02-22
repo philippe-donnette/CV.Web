@@ -1,0 +1,33 @@
+<ul class="list-inline well dn-gallery-items">
+    <li ng-repeat="image in images">
+        <img ng-src="{{ image.url }}" alt="{{ image.title }}" class="img-responsive dn-lk-image" ng-click="openImage(image)" />
+    </li>
+</ul>
+
+<script type="text/ng-template" id="dn-gallery-modal.html">
+    <div id="dn-gallery-modal" class="panel-default">
+        <div class="panel-heading">
+            <div class="row">
+                <div class="col-lg-11 col-md-11 col-sm-11 col-xs-11">
+                    <h2>{{ image.title }}</h2>
+                </div>
+                <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
+                    <a ng-click="close()">X</a>
+                </div>
+            </div>
+        </div>
+        <div class="panel-body">
+            <img ng-src="{{ image.url }}" alt="{{ image.title }}" class="img-responsive" />
+        </div>
+        <div class="panel-footer">
+            <div class="row">
+                <div class="col-lg-11 col-md-11 col-sm-11 col-xs-11">
+                    
+                </div>
+                <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
+                    <a ng-click="close()">X</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</script>

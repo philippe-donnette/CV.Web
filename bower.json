@@ -1,0 +1,22 @@
+{
+  "name": "me",
+  "version": "0.0.0",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "angular": "~1.4.8",
+    "angular-bootstrap": "~1.0.3",
+    "angular-ui-router": "~0.2.15",
+    "bootstrap": "~3.3.6",
+    "angular-mocks": "~1.4.9",
+    "fontawesome": "~4.5.0",
+    "angular-sanitize": "~1.4.9",
+    "devicons": "~1.8.0"
+  }
+}
