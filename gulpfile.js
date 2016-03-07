@@ -9,12 +9,13 @@ var clean = require('gulp-clean');
 var htmlreplace = require('gulp-html-replace');
 var karma = require('gulp-karma');
 var install = require("gulp-install");
+var replace = require('gulp-replace');
 
 gulp.task('compile-app', function () { 
     runSeq('packages-install', 'src-clean', 'src-bower-css', 'src-lib-css', 
     'src-bower-js', 'src-bootstrap-less', 'src-site-less',
     'src-bootstrap-copy-fonts', 'src-fontawesome-copy-fonts',
-    'src-devicons-copy-fonts', 'src-mfizz-copy-fonts', 
+    'src-devicons-copy-fonts', 'src-mfizz-copy-fonts',
     'dist-build', 'run-test');//, 'dist-bower-css');
 });
 
@@ -160,8 +161,20 @@ gulp.task('dist-directives', function () {
 
 gulp.task('dist-build', function () { 
     runSeq('dist-delete', 'dist-fonts', 'dist-images', 'dist-views',
-    'dist-css-js-concat-min', 'dist-directives', 'dist-htaccess');//, 'dist-bower-css');
+    'dist-css-js-concat-min', 'dist-directives', 'dist-htaccess',
+    'dist-replace-apiUrl'); //, 'dist-bower-css');
 });
+
+
+
+
+//START REPLACE @@apiUrl in app.js
+gulp.task('dist-replace-apiUrl', function () {
+    return gulp.src(['./dist/app-*.js'])
+    .pipe(replace('http://localhost:5000/', 'http://cvapi.donola.net/'))
+    .pipe(gulp.dest('./dist')); 
+});
+//END REPLACE @@apiUrl in app.js 
 
 
 

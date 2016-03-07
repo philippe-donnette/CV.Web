@@ -81,7 +81,12 @@ app.config(function ($stateProvider, $urlRouterProvider, $locationProvider) {
     
 });
 
-app.run(['$state', '$stateParams',
+app.run(['$state', '$stateParams', 
     function($state, $stateParams) {
         //this solves page refresh and getting back to state
 }]);
+
+
+app.constant('appSettings', {
+    apiUrl: 'http://localhost:5000/'
+});
