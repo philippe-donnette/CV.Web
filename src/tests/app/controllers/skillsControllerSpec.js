@@ -44,7 +44,7 @@
             });
         });
     
-        it("should call getSkills from skillService", function() {
+        it("Should call getSkills from skillService", function() {
             spyOn(skillsService, 'getSkills').and.callThrough();
             createController();
             expect(skillsService.getSkills).toHaveBeenCalled();
