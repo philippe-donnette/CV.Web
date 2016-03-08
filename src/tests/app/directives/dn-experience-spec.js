@@ -19,12 +19,12 @@
                     role: "Senior Developer", 
                     description: "Some description about the role goes here, do not make it too long as this is not something people might be very interested to read",
                     tags: [
-                        { label: "ASP.NET MVC", weight: "10" },
-                        { label: "ASP.NET WebForm", weight: "5" },
-                        { label: "WCF", weight: "3" },
-                        { label: "SQL SERVER", weight: "9" },
-                        { label: "PHP", weight: "1" },
-                        { label: "CSS", weight: "8" }
+                        { name: "ASP.NET MVC", weight: "10" },
+                        { name: "ASP.NET WebForm", weight: "5" },
+                        { name: "WCF", weight: "3" },
+                        { name: "SQL SERVER", weight: "9" },
+                        { name: "PHP", weight: "1" },
+                        { name: "CSS", weight: "8" }
                     ] 
                 },
                 { 
@@ -32,12 +32,12 @@
                     role: "Senior Developer", 
                     description: "Some description about the role goes here, do not make it too long as this is not something people might be very interested to read",
                     tags: [
-                        { label: "ASP.NET MVC", weight: "10" },
-                        { label: "ASP.NET WebForm", weight: "5" },
-                        { label: "WCF", weight: "3" },
-                        { label: "SQL SERVER", weight: "9" },
-                        { label: "PHP", weight: "1" },
-                        { label: "CSS", weight: "8" }
+                        { name: "ASP.NET MVC", weight: "10" },
+                        { name: "ASP.NET WebForm", weight: "5" },
+                        { name: "WCF", weight: "3" },
+                        { name: "SQL SERVER", weight: "9" },
+                        { name: "PHP", weight: "1" },
+                        { name: "CSS", weight: "8" }
                     ] 
                 }
             ];

@@ -21,12 +21,12 @@
             scope = $rootScope.$new();
 
             scope.tags = [
-                { label: "ASP.NET MVC", weight: "10", iconClass: "devicons devicons-apache" },
-                { label: "ASP.NET WebForm", weight: "5", iconClass: null },
-                { label: "WCF", weight: "3" },
-                { label: "SQL SERVER", weight: "9" },
-                { label: "PHP", weight: "1" },
-                { label: "CSS", weight: "8" }
+                { name: "ASP.NET MVC", weight: "10", iconClass: "devicons devicons-apache" },
+                { name: "ASP.NET WebForm", weight: "5", iconClass: null },
+                { name: "WCF", weight: "3" },
+                { name: "SQL SERVER", weight: "9" },
+                { name: "PHP", weight: "1" },
+                { name: "CSS", weight: "8" }
             ];
             scope.container = true;
             template = angular.element("<dn-tag-cloud tags='tags' container='container'></dn-tag-cloud>");

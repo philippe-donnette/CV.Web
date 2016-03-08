@@ -1,4 +1,21 @@
-app.controller('skillsController', ['$scope', function ($scope) {
+app.controller('skillsController', ['$scope', 'skillsService', function ($scope, skillsService) {
+    
+    skillsService.getSkills().then(
+        function (response) {
+            if(response.status == 200) {
+                $scope.tags = response.data;
+                console.log(JSON.stringify(response));    
+            }
+            else {
+                $scope.tags = [];
+            }
+        },
+        function (response) {
+            $scope.tags = [];
+        }
+    );
+    
+    /*
     $scope.tags = [
         { label: "AngularJS", weight: "10" },
         { label: "HTML", weight: "5" },
@@ -14,6 +31,6 @@ app.controller('skillsController', ['$scope', function ($scope) {
         { label: "Karma", weight: "6" },
         { label: "Jasmine", weight: "6" },
         { label: "TDD", weight: "5" }
-    ];
+    ];*/
     
 }]);

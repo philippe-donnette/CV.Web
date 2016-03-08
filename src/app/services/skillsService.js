@@ -1,4 +1,4 @@
-app.factory('SkillsService', ['$http', '$q', 'appSettings', function ($http, $q, appSettings) {
+app.factory('skillsService', ['$http', '$q', 'appSettings', function ($http, $q, appSettings) {
 
     var serviceBase = appSettings.apiUrl;
     var service = {};

@@ -9,12 +9,12 @@ app.controller('experienceController', ['$scope', function ($scope) {
                 startDate: "2012-04-17",
                 endDate: "2016-06-25", 
                 tags: [
-                    { label: "ASP.NET MVC", weight: "10", iconClass: "devicons devicons-github" },
-                    { label: "ASP.NET WebForm", weight: "5" },
-                    { label: "WCF", weight: "3" },
-                    { label: "SQL SERVER", weight: "9" },
-                    { label: "PHP", weight: "1", iconClass: "devicons devicons-php" },
-                    { label: "CSS", weight: "8" }
+                    { name: "ASP.NET MVC", weight: "10", iconClass: "devicons devicons-github" },
+                    { name: "ASP.NET WebForm", weight: "5" },
+                    { name: "WCF", weight: "3" },
+                    { name: "SQL SERVER", weight: "9" },
+                    { name: "PHP", weight: "1", iconClass: "devicons devicons-php" },
+                    { name: "CSS", weight: "8" }
                 ]                 
             },
             { 
