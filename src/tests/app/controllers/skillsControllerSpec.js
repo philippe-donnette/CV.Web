@@ -1,5 +1,4 @@
 (function () {
-
     describe("skillsController tests", function() {
         var $controller, skillsService, createController, scope;
     
