@@ -1,5 +1,6 @@
 app.controller('skillsController', ['$scope', 'skillsService', function ($scope, skillsService) {
     
+    
     skillsService.getSkills().then(
         function (response) {
             if(response.status == 200) {
@@ -14,6 +15,7 @@ app.controller('skillsController', ['$scope', 'skillsService', function ($scope,
             $scope.tags = [];
         }
     );
+    
     
     /*
     $scope.tags = [
