@@ -1,7 +1,7 @@
 <ul class="list-inline" ng-class="{ 'well': container, 'dn-tag-well': container }">
     <li ng-repeat="tag in tags" ng-click="openTag(tag)" 
         class="dn-tag">
-        <i class="dn-tag-icon-{{ tag.weight }}" ng-class="tag.iconClass"></i><span class="dn-tag-{{ tag.weight }}">{{ tag.name }}</span>
+        <i class="dn-tag-icon-{{ tag.weight }}" ng-class="tag.iconClass"></i> <span class="dn-tag-{{ tag.weight }}">{{ tag.name }}</span>
     </li>
 </ul>
 
@@ -31,9 +31,8 @@
                     <i class="dn-icons-10x" ng-class="tag.iconClass"></i>
                 </div>
             </div>
-            <div class="well">
-                <p>Some text about me and this software or techno.... Some text about me and this software or techno....</p>
-                <p>Some text about me and this software or techno....</p>
+            <div class="well" ng-bind-html="tag.description">
+                
             </div>
         </div>
         <div class="panel-footer dn-modal-footer">
