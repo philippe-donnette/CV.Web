@@ -303,3 +303,19 @@ a.dn-btn-close {
   color: brown;
   background: #fff;
 }
+.dn-versions {
+  padding: 8px 15px;
+  margin-bottom: 20px;
+  list-style: none;
+  background-color: brown;
+  border-radius: 4px;
+}
+.dn-versions > li {
+  display: inline-block;
+  color: #edd1a4;
+}
+.dn-versions > li + li:before {
+  content: "|\00a0";
+  padding: 0 5px;
+  color: #f8eedd;
+}

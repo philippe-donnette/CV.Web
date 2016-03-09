@@ -21,10 +21,10 @@
             <div class="row">
                 <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
                     <ul class="list-unstyled">
-                        <li>Experience: <dn-rating max="10" rating="3"></dn-rating></li>
-                        <li>Current Usage: <dn-rating max="10" rating="6"></dn-rating></li>
-                        <li>Interest: <dn-rating max="10" rating="9"></dn-rating></li>
-                        <li>Version: 2005 Professional, 2010 Professional, 2015 Community</li>
+                        <li>Experience: <dn-rating max="10" rating="tag.experienceRating"></dn-rating></li>
+                        <li>Current Usage: <dn-rating max="10" rating="tag.usageRating"></dn-rating></li>
+                        <li>Interest: <dn-rating max="10" rating="tag.interestRating"></dn-rating></li>
+                        <li>Version: <dn-versions versions="tag.versions"></dn-versions></li>
                     </ul>
                 </div>
                 <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 text-right">
@@ -38,11 +38,8 @@
         </div>
         <div class="panel-footer dn-modal-footer">
             <div class="row">
-                <div class="col-lg-11 col-md-11 col-sm-11 col-xs-11">
-                    
-                </div>
-                <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
-                    <a ng-click="close()">X</a>
+                <div class="col-lg-1 col-md-1 col-sm-1 col-xs-3 pull-right">
+                    <a class="btn btn-default dn-btn-close" ng-click="close()"><i class="fa fa-close"></i></a>
                 </div>
             </div>
         </div>

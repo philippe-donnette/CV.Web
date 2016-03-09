@@ -352,3 +352,20 @@ a.dn-btn-close {
     color: @dn-close-color;
     background: @dn-close-bg;
 }
+
+.dn-versions {
+  padding: 8px 15px;
+  margin-bottom: 20px;
+  list-style: none;
+  background-color: @dn-versions-bg;
+  border-radius: 4px;
+}
+.dn-versions > li {
+  display: inline-block;
+  color: @dn-versions-color;
+}
+.dn-versions > li + li:before {
+  content: @dn-versions-divider;
+  padding: 0 5px;
+  color: @dn-versions-divider-color;
+}
