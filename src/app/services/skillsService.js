@@ -1,4 +1,4 @@
-app.factory('skillsService', ['$http', '$q', 'appSettings', function ($http, $q, appSettings) {
+app.factory('skillsService', ['$http', 'appSettings', function ($http, appSettings) {
 
     var serviceBase = appSettings.apiUrl;
     var service = {};
@@ -9,7 +9,7 @@ app.factory('skillsService', ['$http', '$q', 'appSettings', function ($http, $q,
         });
     };
     
-    service.getSkills = _getSkills;
+    service.getSkills = _getSkills; 
     
     return service;
 }]);

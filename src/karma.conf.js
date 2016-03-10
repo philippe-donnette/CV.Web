@@ -12,6 +12,7 @@ module.exports = function (config) {
             'app/app.js',
             'app/controllers/*.js',
             'app/directives/**/*.js',
+            'app/services/**/*.js',
             'app/views/*.html',
             { pattern: 'images/**/**/*', watched: false, included: false, served: true },
             'tests/app/**/*Spec.js',
