@@ -8,11 +8,6 @@
             module(function($provide) {
             
             $provide.value('skillsService', {
-                listStores: function() {
-                return { 
-                    then: function(callback) {return callback([{ some: "thing", hoursInfo: {isOpen: true}}]);}
-                };
-                },
                 getSkills: function() {
                     return { 
                         then: function(response) {

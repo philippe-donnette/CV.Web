@@ -1,5 +1,20 @@
-app.controller('projectsController', ['$scope', function ($scope) {
+app.controller('projectsController', ['$scope', 'projectService', function ($scope, projectService) {
 
+    projectService.getProjects().then(
+        function (response) {
+            if(response.status == 200) {
+                $scope.projects = response.data;    
+            }
+            else {
+                $scope.projects = [];
+            }
+        },
+        function (response) {
+            $scope.projects = [];
+        }    
+    );
+
+    /*
     $scope.projects = [
         { id: 10, title: 'cv', year: 2016  },
         { id: 9, title: 'Deptford Park Football', year: 2015  },
@@ -12,5 +27,5 @@ app.controller('projectsController', ['$scope', function ($scope) {
         { id: 2, title: 'Louise13', year: 2005  },
         { id: 1, title: 'othodo', year: 2003  }
     ];  
-    
+    */
 }]);

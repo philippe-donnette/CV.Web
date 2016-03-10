@@ -4,7 +4,7 @@ app.factory('skillsService', ['$http', 'appSettings', function ($http, appSettin
     var service = {};
 
     var _getSkills = function () {
-        return $http.get(serviceBase + 'api/skills/all').then(function (response) {
+        return $http.get(serviceBase + 'api/skill/all').then(function (response) {
             return response;
         });
     };
