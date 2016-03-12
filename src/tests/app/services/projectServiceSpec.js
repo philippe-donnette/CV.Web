@@ -23,7 +23,7 @@
         it('should have a getProjects function', function () { 
             expect(angular.isFunction(projectService.getProjects)).toBe(true);
         });
-    
+        
         it("Testing getProjects", function() {
                 var data = [
                         { Id: 1, Name: "CV.Web" },
@@ -34,7 +34,36 @@
                     expect(response.data).toEqual(data);
                 }); 
                 $httpBackend.flush();
-            });
         });
     
+        it('should have a getProject function', function () { 
+            expect(angular.isFunction(projectService.getProject)).toBe(true);
+        });
+        
+        it("Testing getProject", function() {
+                var data = { Id: 1, Name: "CV.Web" };
+                $httpBackend.expectGET('http://localhost:5000/api/project/1').respond(data);
+                projectService.getProject(1).then(function(response) {
+                    expect(response.data).toEqual(data);
+                }); 
+                $httpBackend.flush();
+        }); 
+        
+        it('should have a getSkills function', function () { 
+            expect(angular.isFunction(projectService.getSkills)).toBe(true);
+        });
+        
+        it("Testing getSkills", function() {
+                var data = [
+                        { Id: 1, Name: "ASP.NET 5" },
+                        { Id: 2, Name: "Angular2" }
+                    ];
+                $httpBackend.expectGET('http://localhost:5000/api/project/1/skills').respond(data);
+                projectService.getSkills(1).then(function(response) {
+                    expect(response.data).toEqual(data);
+                }); 
+                $httpBackend.flush(); 
+        });
+    });
+            
 })();

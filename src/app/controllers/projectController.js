@@ -1,5 +1,27 @@
-app.controller('projectController', ['$scope', '$stateParams', function ($scope, $stateParams) {
+app.controller('projectController', ['$scope', '$stateParams', 'projectService', function ($scope, $stateParams, projectService) {
 
+    projectService.getProject($stateParams.id).then(
+        function (response) {
+            if(response.status == 200) {
+                $scope.project = response.data;
+                projectService.getSkills($scope.project.id).then(
+                    function (response) {
+                        if(response.status == 200) {
+                            $scope.project.tags = response.data;
+                        }
+                        else {
+                            $scope.project.tags = null;
+                        }
+                    }
+                );
+            }
+            else {
+                $scope.project = null;
+            }
+        }
+    );    
+    
+    /*
     $scope.project = {
         id: $stateParams.id,
         title: $stateParams.title,
@@ -26,5 +48,5 @@ app.controller('projectController', ['$scope', '$stateParams', function ($scope,
             { id: 3, url: "images/projects/gallery/thor.jpg", title: "Thor" }
         ]  
     };
-    
+    */
 }]);
