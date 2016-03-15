@@ -20,6 +20,22 @@
                 });
         });
     
+        it('should have a getImages function', function () { 
+            expect(angular.isFunction(projectService.getImages)).toBe(true);
+        });
+        
+        it("Testing getImages", function() {
+                var data = [
+                        { id: 1, title: "An image 1" },
+                        { id: 2, title: "An image title 2" }
+                    ];
+                $httpBackend.expectGET('http://localhost:5000/api/project/1/images').respond(data);
+                projectService.getImages(1).then(function(response) {
+                    expect(response.data).toEqual(data);
+                }); 
+                $httpBackend.flush(); 
+        });
+    
         it('should have a getProjects function', function () { 
             expect(angular.isFunction(projectService.getProjects)).toBe(true);
         });

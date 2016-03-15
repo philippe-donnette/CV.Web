@@ -14,9 +14,20 @@ app.controller('projectController', ['$scope', '$stateParams', 'projectService',
                         }
                     }
                 );
+                
+                projectService.getImages($scope.project.id).then(
+                    function (response) {
+                        if(response.status == 200) {
+                            $scope.project.images = response.data;
+                        }
+                        else {
+                            $scope.project.images = null;
+                        }
+                    }
+                );
             }
             else {
-                $scope.project = null;
+                $scope.project = null; 
             }
         }
     );    

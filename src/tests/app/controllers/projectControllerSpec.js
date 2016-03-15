@@ -8,6 +8,15 @@
             module(function($provide) {
             
             $provide.value('projectService', {
+                getImages: function(id) {
+                    return { 
+                        then: function(response) {
+                            return response([
+                                { title: "Some title 1", id: 1 },
+                                { title: "Some title 2", id: 2 }]);
+                        }
+                    };
+                },
                 getProject: function(id) {
                     return { 
                         then: function(response) {
@@ -43,7 +52,13 @@
                 };
             });
         }); 
-    
+   
+        it("Should call getImages from projectService", function() {
+            spyOn(projectService, 'getImages').and.callThrough();
+            createController();
+            expect(projectService.getImages).toHaveBeenCalled();
+        });
+        
         it("Should call getProject from projectService", function() {
             spyOn(projectService, 'getProject').and.callThrough();
             createController();

@@ -3,6 +3,12 @@ app.factory('projectService', ['$http', 'appSettings', function ($http, appSetti
     var serviceBase = appSettings.apiUrl;
     var service = {};
 
+    var _getImages = function (id) {
+        return $http.get(serviceBase + 'api/project/' + id + '/images').then(function (response) {
+            return response;
+        });
+    };
+
     var _getProject = function (id) {
         return $http.get(serviceBase + 'api/project/' + id).then(function (response) {
             return response;
@@ -21,6 +27,7 @@ app.factory('projectService', ['$http', 'appSettings', function ($http, appSetti
         });
     };
     
+    service.getImages = _getImages;
     service.getProject = _getProject; 
     service.getProjects = _getProjects; 
     service.getSkills = _getSkills; 

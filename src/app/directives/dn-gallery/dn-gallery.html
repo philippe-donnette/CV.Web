@@ -1,6 +1,6 @@
 <ul class="list-inline well dn-gallery-items">
     <li ng-repeat="image in images">
-        <img ng-src="{{ image.url }}" alt="{{ image.title }}" class="img-responsive dn-lk-image" ng-click="openImage(image)" />
+        <img ng-src="images/projects/gallery/{{ image.imageUrl }}" alt="{{ image.title }}" class="img-responsive dn-lk-image" ng-click="openImage(image)" />
     </li>
 </ul>
 
@@ -17,7 +17,7 @@
             </div>
         </div>
         <div class="panel-body">
-            <img ng-src="{{ image.url }}" alt="{{ image.title }}" class="img-responsive" />
+            <img ng-src="images/projects/gallery/{{ image.imageUrl }}" alt="{{ image.title }}" class="img-responsive" />
         </div>
         <div class="panel-footer">
             <div class="row">
