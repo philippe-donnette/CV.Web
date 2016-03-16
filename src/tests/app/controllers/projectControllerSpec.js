@@ -20,6 +20,8 @@
                 getProject: function(id) {
                     return { 
                         then: function(response) {
+                            projectService.getImages(id);
+                            projectService.getSkills(id);
                             return response({ name: "CV.Web", id: 1 });
                         }
                     };
