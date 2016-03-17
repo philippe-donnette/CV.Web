@@ -31,12 +31,12 @@ app.config(function ($stateProvider, $urlRouterProvider, $locationProvider) {
                 }
             }
         })
-        .state('root.experience', {
-            url: '/experience',
+        .state('root.experiences', {
+            url: '/experiences',
             views: {
                 'container@': {
-                    templateUrl: 'app/views/experience.html',
-                    controller: 'experienceController'       
+                    templateUrl: 'app/views/experiences.html',
+                    controller: 'experiencesController'       
                 }
             }
         })
