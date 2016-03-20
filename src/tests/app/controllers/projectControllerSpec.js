@@ -40,7 +40,7 @@
         }));
         
         
-        it("Should have project not set", function() {
+        it("Should have project, images and skills set", function() {
             expect(scope.project).not.toBe(null);
             expect(scope.project.images).not.toBe(null);
             expect(scope.project.skills).not.toBe(null);

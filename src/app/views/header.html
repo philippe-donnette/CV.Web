@@ -35,7 +35,7 @@
             <ul class="dropdown-menu">
               <li><a ui-sref="root.projects" ng-click="navCollapsed = true">View All</a></li>
               <li class="divider"></li>
-              <li ng-repeat="project in projects"><a ui-sref="{{ project.href }}" ng-click="navCollapsed = true">{{ project.title }}</a></li>
+              <li ng-repeat="project in projects"><a ui-sref="root.project({ id: project.id, title: project.name })" ng-click="navCollapsed = true">{{ project.name }}</a></li>
             </ul>
           </li>
           
