@@ -1,76 +1,70 @@
 (function () {
     describe("projectController tests", function() {
-        var $controller, projectService, createController, scope;
+        var projectService, scope, $stateParams;
     
         beforeEach(function() {
-            module('dnApp');
             
-            module(function($provide) {
+            var mockProjectService = {};
             
-            $provide.value('projectService', {
-                getImages: function(id) {
-                    return { 
-                        then: function(response) {
-                            return response([
-                                { title: "Some title 1", id: 1 },
-                                { title: "Some title 2", id: 2 }]);
-                        }
-                    };
-                },
-                getProject: function(id) {
-                    return { 
-                        then: function(response) {
-                            projectService.getImages(id);
-                            projectService.getSkills(id);
-                            return response({ name: "CV.Web", id: 1 });
-                        }
-                    };
-                },
-                getSkills: function(id) {
-                    return { 
-                        then: function(response) {
-                            return response([
-                                { name: "ASP.NET 5", id: 1 },
-                                { name: "Angular2", id: 2 }]);
-                        }
-                    };
-                }
-            });
+            module('dnApp', function ($provide) { 
+                $provide.value('projectService', mockProjectService);
+             });
             
-            return null;
-            });
+            inject(function ($q) { 
+                mockProjectService.getImages = function(id) {
+                        var defer = $q.defer();
+                        defer.resolve({ status: 200, data: [{ title: "Some title 1", id: 1 }, { title: "Some title 2", id: 2 }] });
+                        return defer.promise;
+                };
+                mockProjectService.getProject = function(id) {
+                    var defer = $q.defer();
+                    defer.resolve({ status: 200, data: { name: "CV.Web", id: 1 } });
+                    return defer.promise;
+                };
+                mockProjectService.getSkills = function(id) {
+                    var defer = $q.defer();
+                    defer.resolve({ status: 200, data: [{ name: "ASP.NET 5", id: 1 }, { name: "Angular2", id: 2 }] });
+                    return defer.promise;
+                };
+             });
+            
         });
     
-        beforeEach(function() {
+        beforeEach(inject(function($controller, $rootScope, _$stateParams_, _projectService_) {
+            scope = $rootScope.$new();
+            projectService = _projectService_;
+            $stateParams = _$stateParams_;
+            
+            $controller('projectController', {$scope: scope, $stateParams: $stateParams, projectService: projectService });
+            scope.$digest();
+        }));
         
-            inject(function($controller, $rootScope, _projectService_) {
-                scope = $rootScope.$new();
-                projectService = _projectService_;
-                createController = function(params) {
-                    return $controller("projectController", {
-                        $scope: scope,
-                        $stateParams: params || {}
-                    });
-                };
-            });
-        }); 
-   
+        
+        it("Should have project not set", function() {
+            expect(scope.project).not.toBe(null);
+            expect(scope.project.images).not.toBe(null);
+            expect(scope.project.skills).not.toBe(null);
+        });
+        
         it("Should call getImages from projectService", function() {
             spyOn(projectService, 'getImages').and.callThrough();
-            createController();
+            scope.loadImages(1);
             expect(projectService.getImages).toHaveBeenCalled();
+            expect(scope.project.images).not.toBe(null);
         });
         
         it("Should call getProject from projectService", function() {
             spyOn(projectService, 'getProject').and.callThrough();
-            createController();
+            scope.init();
             expect(projectService.getProject).toHaveBeenCalled();
+            expect(scope.project.id).toBe(1);
         });
         
         it("Should call getSkills from projectService", function() {
             spyOn(projectService, 'getSkills').and.callThrough();
-            createController();
+            scope.loadSkills(1);
             expect(projectService.getSkills).toHaveBeenCalled();
+            expect(scope.project.tags).not.toBe(null);
         });
         
         
