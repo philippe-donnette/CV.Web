@@ -1,15 +1,12 @@
 <div class="row dn-intro">
     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 dn-intro-pic pull-right hidden-sm hidden-xs">
-        <img src="./images/user.png" class="dn-img-thumbnail img-circle center-block" />
+        <img ng-src="./images/{{ person.aboutImage }}" class="dn-img-thumbnail img-circle center-block" />
         <div class="dn-intro-text">
-            <span class="dn-name">Software & Web Developer</span>
+            <span class="dn-name">{{ person.aboutCaption }}</span>
             <hr class="dn-star-light">
-            <span class="dn-skills">10 Years Experience in Software Development</span>
+            <span class="dn-skills">{{ person.aboutMotto }}</span>
         </div>
     </div>
-    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 dn-intro-tag">
-        <p>
-            Some bla bla a bit bla bla every where
-        </p>
+    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 dn-intro-tag" ng-bind-html="person.aboutText">
     </div>
 </div>

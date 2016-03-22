@@ -1,9 +1,18 @@
-app.controller('homeController', ['$scope', 'appSettings', function ($scope, appSettings) {
+app.controller('homeController', ['$scope', 'personService', function ($scope, personService) {
     
-    $scope.apiText = appSettings.apiUrl;
+    $scope.init = function () {
+        personService.getPerson().then(
+            function (response) {
+                if(response.status == 200) {
+                    $scope.person = response.data;
+                }
+                else {
+                    $scope.person = null;
+                }
+            }    
+        );    
+    };
     
-    
-    $scope.someText = "Awesome";
-    $scope.otherText = "This is terribly fantastic";
+    $scope.init();
     
 }]);

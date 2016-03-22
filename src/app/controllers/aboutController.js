@@ -1,5 +1,18 @@
-app.controller('aboutController', ['$scope', function ($scope) {
-
-    $scope.someText = "About - Great";    
+app.controller('aboutController', ['$scope', 'personService', function ($scope, personService) {
+    
+    $scope.init = function () {
+        personService.getPerson().then(
+            function (response) {
+                if(response.status == 200) {
+                    $scope.person = response.data;
+                }
+                else {
+                    $scope.person = null;
+                }
+            }    
+        );    
+    };
+    
+    $scope.init();
     
 }]);
