@@ -31,6 +31,15 @@ app.config(function ($stateProvider, $urlRouterProvider, $locationProvider) {
                 }
             }
         })
+        .state('root.qualifications', {
+            url: '/qualifications-training',
+            views: {
+                'container@': {
+                    templateUrl: 'app/views/qualifications.html',
+                    controller: 'qualificationsController'       
+                }
+            }
+        })
         .state('root.experiences', {
             url: '/experiences',
             views: {
