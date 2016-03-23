@@ -2,10 +2,10 @@ app.controller('aboutController', ['$scope', 'personService', function ($scope, 
     
     $scope.init = function () {
         personService.getPerson().then(
-            function (response) {
-                $scope.person = response.data;
+            function (data) {
+                $scope.person = data;
             },
-            function (response) {
+            function () {
                 $scope.person = null;
             }    
         );    

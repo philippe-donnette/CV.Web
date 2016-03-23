@@ -5,11 +5,8 @@ app.factory('qualificationService', ['$http', 'appSettings', function ($http, ap
 
     var _getQualifications = function () {
         return $http.get(serviceBase + 'api/qualification/all')
-            .success(function (data) {
-                return data;
-            })
-            .error(function (response) {
-                return response;
+            .then(function (response) {
+                return response.data;
             });
     };
     

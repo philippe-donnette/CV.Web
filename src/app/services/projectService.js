@@ -5,29 +5,26 @@ app.factory('projectService', ['$http', 'appSettings', function ($http, appSetti
 
     var _getImages = function (id) {
         return $http.get(serviceBase + 'api/project/' + id + '/images').then(function (response) {
-            return response;
+            return response.data;
         });
     };
 
     var _getProject = function (id) {
         return $http.get(serviceBase + 'api/project/' + id).then(function (response) {
-            return response;
+            return response.data;
         });
     };
     
     var _getProjects = function () {
         return $http.get(serviceBase + 'api/project/all').then(function (response) {
-            return response;
+            return response.data;
         });
     };
     
     var _getSkills = function (id) {
         return $http.get(serviceBase + 'api/project/' + id + '/skills')
-            .success(function (data) {
-                return data;
-            })
-            .error(function (response) {
-                return response;
+            .then(function (response) {
+                return response.data;
             });
     };
     

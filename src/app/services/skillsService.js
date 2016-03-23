@@ -5,11 +5,8 @@ app.factory('skillsService', ['$http', 'appSettings', function ($http, appSettin
 
     var _getSkills = function () {
         return $http.get(serviceBase + 'api/skill/all')
-            .success(function (data) {
-                return data;
-            })
-            .error(function (response) {
-                return response;
+            .then(function (response) {
+                return response.data;
             });
     };
     

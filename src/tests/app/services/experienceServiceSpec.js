@@ -4,20 +4,19 @@
     
         beforeEach(function() {
             module('dnApp'); 
-            
             module(function($provide) {
-            
             });
         });
+        
         beforeEach(module('app/views/header.html'));
         beforeEach(module('app/views/footer.html'));
         beforeEach(module('app/views/home.html'));
-        beforeEach(function() {
-            
-                inject(function(_$httpBackend_, _experienceService_) {
-                    $httpBackend = _$httpBackend_;
-                    experienceService = _experienceService_;
-                });
+        
+        beforeEach(function() {    
+            inject(function(_$httpBackend_, _experienceService_) {
+                $httpBackend = _$httpBackend_;
+                experienceService = _experienceService_;
+            });
         });
     
         it('should have a getExperiences function', function () { 
@@ -31,7 +30,7 @@
                     ];
                 $httpBackend.expectGET('http://localhost:5000/api/experience/all').respond(data);
                 experienceService.getExperiences().then(function(response) {
-                    expect(response.data).toEqual(data);
+                    expect(response).toEqual(data);
                 }); 
                 $httpBackend.flush();
         });
@@ -44,7 +43,7 @@
                 var data = { id: 1, companyName: "DOCDATA" };
                 $httpBackend.expectGET('http://localhost:5000/api/experience/1').respond(data);
                 experienceService.getExperience(1).then(function(response) {
-                    expect(response.data).toEqual(data);
+                    expect(response).toEqual(data);
                 }); 
                 $httpBackend.flush();
         }); 
@@ -54,15 +53,15 @@
         });
         
         it("Testing getSkills", function() {
-                var data = [
-                        { Id: 1, Name: "ASP.NET 5" },
-                        { Id: 2, Name: "Angular2" }
-                    ];
-                $httpBackend.expectGET('http://localhost:5000/api/experience/1/skills').respond(data);
-                experienceService.getSkills(1).then(function(response) {
-                    expect(response.data).toEqual(data);
-                }); 
-                $httpBackend.flush(); 
+            var data = [
+                    { Id: 1, Name: "ASP.NET 5" },
+                    { Id: 2, Name: "Angular2" }
+                ];
+            $httpBackend.expectGET('http://localhost:5000/api/experience/1/skills').respond(data);
+            experienceService.getSkills(1).then(function(response) {
+                expect(response).toEqual(data);
+            }); 
+            $httpBackend.flush(); 
         });
     });
             

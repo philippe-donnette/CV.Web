@@ -2,10 +2,10 @@ app.controller('headerController', ['$scope', 'projectService', function ($scope
       
     $scope.init = function () {
         projectService.getProjects().then(
-            function (response) {
-                $scope.projects = response.data;
+            function (data) {
+                $scope.projects = data;
             },
-            function (response) {
+            function () {
                 $scope.projects = null;
             }  
         );

@@ -14,7 +14,7 @@
             inject(function ($q) {
                 mockProjectService.getProjects = function () {
                     var defer = $q.defer();
-                    defer.resolve({ status: 200, data: [{ name: "CV.Web", id: 1 }, { name: "Deptford Park Football", id: 2 }] });
+                    defer.resolve([{ name: "CV.Web", id: 1 }, { name: "Deptford Park Football", id: 2 }]);
                     return defer.promise;    
                 };
             });

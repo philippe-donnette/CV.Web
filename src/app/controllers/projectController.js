@@ -3,12 +3,12 @@ app.controller('projectController', ['$scope', '$stateParams', 'projectService',
     
     $scope.init = function () {
         projectService.getProject($stateParams.id).then(
-            function (response) {
-                $scope.project = response.data;
+            function (data) {
+                $scope.project = data;
                 $scope.loadSkills($scope.project.id);
                 $scope.loadImages($scope.project.id);
             },
-            function (response) {
+            function () {
                 $scope.project = null; 
             } 
         );    
@@ -16,10 +16,10 @@ app.controller('projectController', ['$scope', '$stateParams', 'projectService',
     
     $scope.loadSkills = function (id) { 
         projectService.getSkills(id).then(
-            function (response) {
-                $scope.project.tags = response.data;
+            function (data) {
+                $scope.project.tags = data;
             },
-            function (response) {
+            function () {
                 $scope.project.tags = null;
             }
         );    
@@ -27,10 +27,10 @@ app.controller('projectController', ['$scope', '$stateParams', 'projectService',
     
     $scope.loadImages = function (id) {
         projectService.getImages(id).then(
-            function (response) {
-                $scope.project.images = response.data;
+            function (data) {
+                $scope.project.images = data;
             },
-            function (response) {
+            function () {
                 $scope.project.images = null;
             }
         );  

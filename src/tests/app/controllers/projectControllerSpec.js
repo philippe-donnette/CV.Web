@@ -13,17 +13,17 @@
             inject(function ($q) { 
                 mockProjectService.getImages = function(id) {
                         var defer = $q.defer();
-                        defer.resolve({ status: 200, data: [{ title: "Some title 1", id: 1 }, { title: "Some title 2", id: 2 }] });
+                        defer.resolve([{ title: "Some title 1", id: 1 }, { title: "Some title 2", id: 2 }]);
                         return defer.promise;
                 };
                 mockProjectService.getProject = function(id) {
                     var defer = $q.defer();
-                    defer.resolve({ status: 200, data: { name: "CV.Web", id: 1 } });
+                    defer.resolve({ name: "CV.Web", id: 1 });
                     return defer.promise;
                 };
                 mockProjectService.getSkills = function(id) {
                     var defer = $q.defer();
-                    defer.resolve({ status: 200, data: [{ name: "ASP.NET 5", id: 1 }, { name: "Angular2", id: 2 }] });
+                    defer.resolve([{ name: "ASP.NET 5", id: 1 }, { name: "Angular2", id: 2 }]);
                     return defer.promise;
                 };
              });

@@ -25,15 +25,15 @@
         });
         
         it("Testing getQualifications", function() {
-                var data = [
-                        { id: 1, schoolName: "H.E.I.G" },
-                        { id: 2, schoolName: "Lycee Martin Luther King" }
-                    ];
-                $httpBackend.expectGET('http://localhost:5000/api/qualification/all').respond(data);
-                qualificationService.getQualifications().then(function(response) {
-                    expect(response.data).toEqual(data);
-                }); 
-                $httpBackend.flush();
+            var data = [
+                    { id: 1, schoolName: "H.E.I.G" },
+                    { id: 2, schoolName: "Lycee Martin Luther King" }
+                ];
+            $httpBackend.expectGET('http://localhost:5000/api/qualification/all').respond(data);
+            qualificationService.getQualifications().then(function(response) {
+                expect(response).toEqual(data);
+            }); 
+            $httpBackend.flush();
         });
     
     });

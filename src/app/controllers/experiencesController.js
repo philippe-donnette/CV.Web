@@ -1,12 +1,16 @@
 app.controller('experiencesController', ['$scope', 'experienceService', function ($scope, experienceService) {
         
-        experienceService.getExperiences().then(
-            function (response) {
-                $scope.jobs = response.data;
-            },
-            function (response) {
-                $scope.jobs = [];
-            }  
-        );
+        $scope.init = function () {
+            experienceService.getExperiences().then(
+                function (data) {
+                    $scope.jobs = data;
+                },
+                function () {
+                    $scope.jobs = [];
+                }  
+            );
+        };
+        
+        $scope.init();
         
 }]);

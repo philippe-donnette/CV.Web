@@ -5,12 +5,7 @@ app.factory('personService', ['$http', 'appSettings', function ($http, appSettin
 
     var _getPerson = function () { 
         return $http.get(serviceBase + 'api/person')
-            .success(function (data) {
-                return data;
-            })
-            .error(function (response) {
-                return response;
-            });
+            .then(function (response) { return response.data; });
     };
     
     service.getPerson = _getPerson;  

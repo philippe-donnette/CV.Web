@@ -13,7 +13,7 @@
             inject(function ($q) { 
                 mockPersonService.getPerson = function() {
                     var defer = $q.defer();
-                    defer.resolve({ status: 200, data: { lastname: "Donnette", firstname: "Philippe", id: 1 } });
+                    defer.resolve({ lastname: "Donnette", firstname: "Philippe", id: 1 });
                     return defer.promise;
                 };
              });
