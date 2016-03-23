@@ -22,9 +22,13 @@ app.factory('projectService', ['$http', 'appSettings', function ($http, appSetti
     };
     
     var _getSkills = function (id) {
-        return $http.get(serviceBase + 'api/project/' + id + '/skills').then(function (response) {
-            return response;
-        });
+        return $http.get(serviceBase + 'api/project/' + id + '/skills')
+            .success(function (data) {
+                return data;
+            })
+            .error(function (response) {
+                return response;
+            });
     };
     
     service.getImages = _getImages;

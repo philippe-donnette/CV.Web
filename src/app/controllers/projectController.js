@@ -4,14 +4,12 @@ app.controller('projectController', ['$scope', '$stateParams', 'projectService',
     $scope.init = function () {
         projectService.getProject($stateParams.id).then(
             function (response) {
-                if(response.status == 200) {
-                    $scope.project = response.data;
-                    $scope.loadSkills($scope.project.id);
-                    $scope.loadImages($scope.project.id);
-                }
-                else {
-                    $scope.project = null; 
-                }
+                $scope.project = response.data;
+                $scope.loadSkills($scope.project.id);
+                $scope.loadImages($scope.project.id);
+            },
+            function (response) {
+                $scope.project = null; 
             } 
         );    
     };
@@ -19,12 +17,10 @@ app.controller('projectController', ['$scope', '$stateParams', 'projectService',
     $scope.loadSkills = function (id) { 
         projectService.getSkills(id).then(
             function (response) {
-                if(response.status == 200) {
-                    $scope.project.tags = response.data;
-                }
-                else {
-                    $scope.project.tags = null;
-                }
+                $scope.project.tags = response.data;
+            },
+            function (response) {
+                $scope.project.tags = null;
             }
         );    
     };
@@ -32,12 +28,10 @@ app.controller('projectController', ['$scope', '$stateParams', 'projectService',
     $scope.loadImages = function (id) {
         projectService.getImages(id).then(
             function (response) {
-                if(response.status == 200) {
-                    $scope.project.images = response.data;
-                }
-                else {
-                    $scope.project.images = null;
-                }
+                $scope.project.images = response.data;
+            },
+            function (response) {
+                $scope.project.images = null;
             }
         );  
     };

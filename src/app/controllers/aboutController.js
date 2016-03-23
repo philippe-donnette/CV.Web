@@ -3,12 +3,10 @@ app.controller('aboutController', ['$scope', 'personService', function ($scope, 
     $scope.init = function () {
         personService.getPerson().then(
             function (response) {
-                if(response.status == 200) {
-                    $scope.person = response.data;
-                }
-                else {
-                    $scope.person = null;
-                }
+                $scope.person = response.data;
+            },
+            function (response) {
+                $scope.person = null;
             }    
         );    
     };

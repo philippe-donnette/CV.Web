@@ -4,21 +4,33 @@ app.factory('experienceService', ['$http', 'appSettings', function ($http, appSe
     var service = {};
 
     var _getExperience = function (id) {
-        return $http.get(serviceBase + 'api/experience/' + id).then(function (response) {
-            return response;
-        });
+        return $http.get(serviceBase + 'api/experience/' + id)
+            .success(function (data) {
+                return data;
+            })
+            .error(function (response) {
+                return response;
+            });
     };
     
     var _getExperiences = function () {
-        return $http.get(serviceBase + 'api/experience/all').then(function (response) {
-            return response;
-        });
+        return $http.get(serviceBase + 'api/experience/all')
+            .success(function (data) {
+                return data;
+            })
+            .error(function (response) {
+                return response;
+            });
     };
     
     var _getSkills = function (id) {
-        return $http.get(serviceBase + 'api/experience/' + id + '/skills').then(function (response) {
-            return response;
-        });
+        return $http.get(serviceBase + 'api/experience/' + id + '/skills')
+            .success(function (data) {
+                return data;
+            })
+            .error(function (response) {
+                return response;
+            });
     };
     
     service.getExperience = _getExperience; 

@@ -3,8 +3,8 @@ app.controller('qualificationsController', ['$scope', 'qualificationService', fu
     $scope.init = function () {
         qualificationService.getQualifications()
             .then(
-                function (data) {
-                    $scope.studies = data;
+                function (response) {
+                    $scope.studies = response.data;
                 },
                 function (response) {
                     $scope.studies = null;

@@ -3,12 +3,10 @@ app.controller('headerController', ['$scope', 'projectService', function ($scope
     $scope.init = function () {
         projectService.getProjects().then(
             function (response) {
-                if(response.status == 200) {
-                    $scope.projects = response.data;
-                }
-                else {
-                    $scope.projects = null;
-                }
+                $scope.projects = response.data;
+            },
+            function (response) {
+                $scope.projects = null;
             }  
         );
     };
