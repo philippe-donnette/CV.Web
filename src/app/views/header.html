@@ -15,24 +15,13 @@
       <div class="collapse navbar-collapse" ng-class="!navCollapsed && 'in'">
       
         <ul class="nav navbar-nav">
-          <li ui-sref-active="active"><a ui-sref="root.home" ng-click="navCollapsed = true">Home</a></li>
-          <li ui-sref-active="active"><a ui-sref="root.skills" ng-click="navCollapsed = true">Skills</a></li>
-          <li ui-sref-active="active"><a ui-sref="root.qualifications" ng-click="navCollapsed = true">Qualifications & Training</a></li>
-          <li ui-sref-active="active"><a ui-sref="root.experiences" ng-click="navCollapsed = true">Experience</a></li>
-          
-          <!--<li uib-dropdown>
-            <a href="#" uib-dropdown-toggle>Experience <b class="caret"></b></a>
-            <ul class="dropdown-menu">
-              <li><a ui-sref="root.experience" ng-click="navCollapsed = true">home</a></li>
-              <li><a ui-sref="root.about" ng-click="navCollapsed = true">about</a></li>
-              <li><a href="#">Something else here</a></li>
-              <li><a href="#">Separated link</a></li>
-              <li><a href="#">One more separated link</a></li>
-            </ul>
-          </li>-->
+          <li ui-sref-active="active"><a ui-sref="root.home" ng-click="navCollapsed = true"><i class="fa fa-home hidden-sm"></i> Home</a></li>
+          <li ui-sref-active="active"><a ui-sref="root.skills" ng-click="navCollapsed = true"><i class="glyphicon glyphicon-wrench hidden-sm"></i> Skills</a></li>
+          <li ui-sref-active="active"><a ui-sref="root.qualifications" ng-click="navCollapsed = true"><i class="glyphicon glyphicon-education hidden-sm"></i> Qualifications</a></li>
+          <li ui-sref-active="active"><a ui-sref="root.experiences" ng-click="navCollapsed = true"><i class="fa fa-lightbulb-o hidden-sm"></i> Experience</a></li>
           
           <li uib-dropdown ui-sref-active="active">
-            <a href="#" uib-dropdown-toggle>Personal Projects <b class="caret"></b></a>
+            <a href="#" uib-dropdown-toggle><i class="fa fa-suitcase hidden-sm"></i> Projects <b class="caret"></b></a>
             <ul class="dropdown-menu">
               <li><a ui-sref="root.projects" ng-click="navCollapsed = true">View All</a></li>
               <li class="divider"></li>
@@ -40,12 +29,14 @@
             </ul>
           </li>
           
-          <li ui-sref-active="active"><a ui-sref="root.about" ng-click="navCollapsed = true">About Me</a></li>
+          <li ui-sref-active="active"><a ui-sref="root.about" ng-click="navCollapsed = true"><i class="fa fa-user hidden-sm"></i> About Me</a></li>
           
         </ul>
         <ul class="nav navbar-nav navbar-right dn-padding-r-10">
-          <li><a href="#">Contact</a></li>
-          <li><a href="#" class="dn-linkedin"><i class="fa fa-linkedin-square"></i></a></li>
+          <li>
+            <a href="#" class="dn-linkedin"><i class="fa fa-linkedin-square"></i></a>
+            <a href="#" class="dn-github"><i class="fa fa-github"></i></a>
+          </li>
         </ul>
       </div><!-- /.navbar-collapse -->
 </nav>

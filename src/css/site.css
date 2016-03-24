@@ -94,6 +94,16 @@ hr.dn-star-light:after {
 .navbar-nav > li > a.dn-linkedin {
   color: #0177B5;
   font-size: 20px;
+  display: inline;
+  line-height: 50px;
+  padding: 15px 0px 15px 3px;
+}
+.navbar-nav > li > a.dn-github {
+  color: #333;
+  font-size: 20px;
+  display: inline;
+  line-height: 50px;
+  padding: 15px 7px 15px 0;
 }
 .dn-experience {
   color: #ffffe5;
