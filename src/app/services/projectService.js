@@ -1,10 +1,10 @@
-app.factory('projectService', ['$http', 'appSettings', function ($http, appSettings) {
+app.factory('projectService', ['$http', 'appSettings', '$timeout', function ($http, appSettings, $timeout) {
 
     var serviceBase = appSettings.apiUrl;
     var service = {};
 
     var _getImages = function (id) {
-        return $http.get(serviceBase + 'api/project/' + id + '/images').then(function (response) {
+        return $http.get(serviceBase + 'api/project/' + id + '/images').then(function (response) { 
             return response.data;
         });
     };
@@ -22,10 +22,9 @@ app.factory('projectService', ['$http', 'appSettings', function ($http, appSetti
     };
     
     var _getSkills = function (id) {
-        return $http.get(serviceBase + 'api/project/' + id + '/skills')
-            .then(function (response) {
-                return response.data;
-            });
+        return $http.get(serviceBase + 'api/project/' + id + '/skills').then(function (response) { 
+            return response.data;
+        });
     };
     
     service.getImages = _getImages;

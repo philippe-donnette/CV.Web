@@ -1,6 +1,6 @@
 app.controller('headerController', ['$scope', 'projectService', function ($scope, projectService) {
       
-    $scope.init = function () {
+    var init = function () {
         projectService.getProjects().then(
             function (data) {
                 $scope.projects = data;
@@ -11,6 +11,6 @@ app.controller('headerController', ['$scope', 'projectService', function ($scope
         );
     };
     
-    $scope.init();
+    init();
     
 }]);

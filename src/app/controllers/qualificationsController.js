@@ -1,6 +1,6 @@
 app.controller('qualificationsController', ['$scope', 'qualificationService', function ($scope, qualificationService) {
     
-    $scope.init = function () {
+    var init = function () {
         qualificationService.getQualifications()
             .then(
                 function (data) {
@@ -17,5 +17,5 @@ app.controller('qualificationsController', ['$scope', 'qualificationService', fu
             );
     };
     
-    $scope.init();
+    init();
 }]);

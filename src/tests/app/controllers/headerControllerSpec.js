@@ -25,6 +25,8 @@
                     scope = $rootScope.$new();
                     projectService = _projectService_;
                     
+                    spyOn(projectService, 'getProjects').and.callThrough();
+                    
                     controller = $controller('headerController', { $scope: scope, projectService: projectService });
                     scope.$digest();
                 });
@@ -36,8 +38,6 @@
         });
         
         it('Should call getProjects', function () {
-            spyOn(projectService, 'getProjects').and.callThrough();
-            scope.init();
             expect(projectService.getProjects).toHaveBeenCalled();
         });         
            

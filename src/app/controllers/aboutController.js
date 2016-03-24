@@ -1,6 +1,6 @@
 app.controller('aboutController', ['$scope', 'personService', function ($scope, personService) {
     
-    $scope.init = function () {
+    var init = function () {
         personService.getPerson().then(
             function (data) {
                 $scope.person = data;
@@ -11,6 +11,6 @@ app.controller('aboutController', ['$scope', 'personService', function ($scope, 
         );    
     };
     
-    $scope.init();
+    init();
     
 }]);

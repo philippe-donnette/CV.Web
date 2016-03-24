@@ -35,19 +35,14 @@
                 scope = $rootScope.$new();
                 experienceService = _experienceService_;
                 
+                spyOn(experienceService, 'getExperiences').and.callThrough();
+                
                 controller = $controller('experiencesController', { $scope: scope, experienceService: experienceService });
                 scope.$digest();
             });
         });
-                
-        //beforeEach(module('app/views/header.html'));
-        //beforeEach(module('app/views/footer.html'));
-        //beforeEach(module('app/views/home.html'));
-    
     
         it("Should call getExperiences from experienceService", function() {
-            spyOn(experienceService, 'getExperiences').and.callThrough();
-            scope.init();
             expect(experienceService.getExperiences).toHaveBeenCalled();
         });
         

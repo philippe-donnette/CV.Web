@@ -24,6 +24,8 @@
             scope = $rootScope.$new();
             personService = _personService_;
             
+            spyOn(personService, 'getPerson').and.callThrough();
+            
             $controller('homeController', {$scope: scope, personService: personService });
             scope.$digest();
         }));
@@ -34,8 +36,6 @@
         });
         
         it("Should call getPerson from personService", function() {
-            spyOn(personService, 'getPerson').and.callThrough();
-            scope.init();
             expect(personService.getPerson).toHaveBeenCalled();
             expect(scope.person.id).toBe(1);
         });

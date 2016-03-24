@@ -35,6 +35,10 @@
             projectService = _projectService_;
             $stateParams = _$stateParams_;
             
+            spyOn(projectService, 'getImages').and.callThrough();
+            spyOn(projectService, 'getProject').and.callThrough();
+            spyOn(projectService, 'getSkills').and.callThrough();
+            
             $controller('projectController', {$scope: scope, $stateParams: $stateParams, projectService: projectService });
             scope.$digest();
         }));
@@ -47,22 +51,16 @@
         });
         
         it("Should call getImages from projectService", function() {
-            spyOn(projectService, 'getImages').and.callThrough();
-            scope.loadImages(1);
             expect(projectService.getImages).toHaveBeenCalled();
             expect(scope.project.images).not.toBe(null);
         });
         
         it("Should call getProject from projectService", function() {
-            spyOn(projectService, 'getProject').and.callThrough();
-            scope.init();
             expect(projectService.getProject).toHaveBeenCalled();
             expect(scope.project.id).toBe(1);
         });
         
         it("Should call getSkills from projectService", function() {
-            spyOn(projectService, 'getSkills').and.callThrough();
-            scope.loadSkills(1);
             expect(projectService.getSkills).toHaveBeenCalled();
             expect(scope.project.tags).not.toBe(null);
         });
