@@ -3,7 +3,7 @@
     <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12" ng-repeat="study in studies">
         <div class="thumbnail text-center">
             <img ng-src="images/qualifications/{{ study.imageUrl }}" alt="{{ study.schoolName }}" ng-show="{{ study.imageUrl != null }}" />
-            <i class="fa fa-image fa-5x" ng-show="{{ study.imageUrl == null }}"></i>
+            <i class="fa fa-image dn-fa-10x" ng-show="{{ study.imageUrl == null }}"></i>
             <div class="caption text-left">
                 <h2>{{ study.subject }}</h2>
                 <h3>{{ study.schoolName }}</h3>

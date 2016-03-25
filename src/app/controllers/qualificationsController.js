@@ -1,4 +1,4 @@
-app.controller('qualificationsController', ['$scope', 'qualificationService', function ($scope, qualificationService) {
+app.controller('qualificationsController', ['$scope', 'qualificationService', 'trainingService', function ($scope, qualificationService, trainingService) {
     
     var init = function () {
         qualificationService.getQualifications()
@@ -8,6 +8,15 @@ app.controller('qualificationsController', ['$scope', 'qualificationService', fu
                 },
                 function () {
                     $scope.studies = null;
+                }
+            );
+        trainingService.getTrainings()
+            .then(
+                function (data) {
+                    $scope.trainings = data;
+                },
+                function () {
+                    $scope.trainings = null;
                 }
             );
     };

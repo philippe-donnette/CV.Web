@@ -36,7 +36,7 @@
                 };
             });
         }); 
-    
+                
         it("Should call getProjects from projectService", function() {
             spyOn(projectService, 'getProjects').and.callThrough();
             createController();

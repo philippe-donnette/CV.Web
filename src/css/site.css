@@ -329,3 +329,21 @@ a.dn-btn-close {
   padding: 0 5px;
   color: #f8eedd;
 }
+.dn-fa-10x {
+  font-size: 10em;
+}
+.dn-training-icon {
+  max-height: 50px;
+  padding: 1px;
+  line-height: 1.42857143;
+  background-color: orange;
+  border: 2px solid brown;
+  -webkit-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  max-width: 100%;
+  height: auto;
+}
+.dn-trainings {
+  color: orange;
+}
