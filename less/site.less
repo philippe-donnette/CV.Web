@@ -410,11 +410,12 @@ a.dn-btn-close {
 .dn-about-card-caption {
     position: relative;
     top: -20px;
-    background: black;
-    color: white;
+    background: @dn-color-text-alt;
+    color: @dn-color-text;
     width: 100%;    
     padding: 0 5px;
 }
+
 /*** start Flip card **/
 
 .dn-flipcard-container {
@@ -430,6 +431,15 @@ a.dn-btn-close {
     height: 154px;
 }
 
+.dn-flipcard-loc-city {
+    padding-top: 20px;
+    font-size: 2em;
+}
+
+.dn-flipcard-loc-country {
+    font-size: 2em;
+}
+
 @media (max-width: 1199px) {
     .dn-flipcard-container {
         position: relative;
@@ -443,6 +453,15 @@ a.dn-btn-close {
         width: 337px;
         height: 210px;
     }
+    
+    .dn-flipcard-loc-city {
+        padding-top: 40px;
+        font-size: 3em;
+    }
+
+    .dn-flipcard-loc-country {
+        font-size: 3em;
+    }
 }
 
 @media (max-width: 767px) {
@@ -455,8 +474,17 @@ a.dn-btn-close {
     }
     
     .dn-flipcard-container > img {
-        width: 2250px;
+        width: 225px;
         height: 140px;
+    }
+    
+    .dn-flipcard-loc-city {
+        padding-top: 20px;
+        font-size: 2em;
+    }
+
+    .dn-flipcard-loc-country {
+        font-size: 2em;
     }
 }
 
@@ -499,15 +527,15 @@ a.dn-btn-close {
   transform: rotateY(180deg);
   box-sizing: border-box;
   padding: 10px;
-  color: white;
+  color: @dn-color-text;
   text-align: center;
-  background-color: #aaa;
+  background-color: @dn-color-text-alt;
 }
 
 .dn-flipcard-shadow {
-  -webkit-box-shadow: 5px 5px 5px #aaa;
-  -moz-box-shadow: 5px 5px 5px #aaa;
-  box-shadow: 5px 5px 5px #aaa;
+  -webkit-box-shadow: 3px 3px 3px @dn-flipcard-shadow;
+  -moz-box-shadow: 3px 3px 3px @dn-flipcard-shadow;
+  box-shadow: 3px 3px 3px @dn-flipcard-shadow;
   margin-bottom: 10px;
 }
 
@@ -520,9 +548,9 @@ a.dn-btn-close {
   -o-transform: rotateY(180deg);
   transform: rotateY(180deg);
 
-  -webkit-box-shadow: -5px 5px 5px #aaa;
-  -moz-box-shadow: -5px 5px 5px #aaa;
-  box-shadow: -5px 5px 5px #aaa;
+  -webkit-box-shadow: -3px 3px 3px @dn-flipcard-shadow;
+  -moz-box-shadow: -3px 3px 3px @dn-flipcard-shadow;
+  box-shadow: -3px 3px 3px @dn-flipcard-shadow;
 }
 
 #dn-about-card-container-2:hover #dn-about-card-2, #dn-about-card-container-2.hover_effect #dn-about-card-2,
@@ -532,9 +560,9 @@ a.dn-btn-close {
   -o-transform: rotateX(180deg);
   transform: rotateX(180deg);
 
-  -webkit-box-shadow: -5px 5px 5px #aaa;
-  -moz-box-shadow: -5px 5px 5px #aaa;
-  box-shadow: -5px 5px 5px #aaa;
+  -webkit-box-shadow: -3px 3px 3px @dn-flipcard-shadow;
+  -moz-box-shadow: -3px 3px 3px @dn-flipcard-shadow;
+  box-shadow: -3px 3px 3px @dn-flipcard-shadow;
 }
 
 /*** end Flip card **/
