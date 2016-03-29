@@ -33,6 +33,22 @@
             $httpBackend.flush();
         }); 
         
+        it('should have a getCards function', function () { 
+            expect(angular.isFunction(personService.getCards)).toBe(true);
+        });
+        
+        it("Testing getPerson", function() {
+            var data = [ 
+                { rotate: "x", imageFrontUrl: "card-contact.jpg", textFront: null, caption: "Family", captionIconClass: "fa fa-group", textBack: "Happy father of two, one boy Matti and one girl Leila", imageBackUrl: null },
+                { rotate: "y", imageFrontUrl: "card-contact.jpg", textFront: null, caption: "Location", captionIconClass: "fa fa-map-marker", textBack: "London SE8<br />United Kingdom", imageBackUrl: null }
+            ];
+            $httpBackend.expectGET('http://localhost:5000/api/person/cards').respond(data);
+            personService.getCards().then(function(response) {
+                expect(response).toEqual(data);
+            }); 
+            $httpBackend.flush();
+        });
+        
     });
             
 })();

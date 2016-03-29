@@ -1,0 +1,19 @@
+<div class="dn-flipcard-container" 
+    ng-class="{ 'dn-flipcard-container-rotate-x': (rotate == 'x'), 'dn-flipcard-container-rotate-y': (rotate == 'y') }">
+    <div class="dn-flipcard-card dn-flipcard-shadow" 
+        ng-class="{ 'dn-flipcard-card-rotate-x': (rotate == 'x'), 'dn-flipcard-card-rotate-y': (rotate == 'y') }">
+        <div class="dn-flipcard-face dn-flipcard-front">
+            <img ng-src="./images/about/{{ imageFrontUrl }}" class="img-responsive"
+                ng-show="{{ imageFrontUrl != null }}" />
+            <p ng-bind-html="textFront" ng-show="{{ textFront != null }}"></p>
+            <div class="dn-flipcard-caption">
+                <i class="{{ captionIconClass }}"></i> {{ caption }}
+            </div>                
+        </div>
+        <div class="dn-flipcard-face dn-flipcard-back center">
+            <img ng-src="./images/about/{{ imageBackUrl }}" class="img-responsive"
+                ng-show="{{ imageBackUrl != null }}" />
+            <p ng-bind-html="textBack" ng-show="{{ textBack != null }}"></p>
+        </div>
+    </div>
+</div>

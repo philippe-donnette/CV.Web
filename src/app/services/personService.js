@@ -8,7 +8,13 @@ app.factory('personService', ['$http', 'appSettings', function ($http, appSettin
             .then(function (response) { return response.data; });
     };
     
-    service.getPerson = _getPerson;  
+    var _getCards = function () { 
+        return $http.get(serviceBase + 'api/person/cards')
+            .then(function (response) { return response.data; });
+    };
+    
+    service.getPerson = _getPerson;
+    service.getCards = _getCards;  
     
     return service;
 }]);

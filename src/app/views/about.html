@@ -23,8 +23,16 @@
     
         <div class="row">
     
+            <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12" ng-repeat="card in cards">
+                <dn-flipcard caption="card.caption" caption-icon-class="card.captionIconClass" 
+                    text-front="card.textFront" image-front-url="card.imageFrontUrl"
+                    text-back="card.textBack" image-back-url="card.imageBackUrl"
+                    rotate="card.rotate"></dn-flipcard> 
+            </div>
+    
+            <!--
             <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
-                <!--1st card-->
+                
                 <div class="dn-flipcard-container dn-flipcard-container-rotate-y">
                     <div class="dn-flipcard-card dn-flipcard-shadow dn-flipcard-card-rotate-y">
                         <div class="dn-flipcard-front dn-flipcard-face">
@@ -39,7 +47,7 @@
                 </div>    
             </div>
             <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
-                <!--2nd card-->
+                
                 <div class="dn-flipcard-container dn-flipcard-container-rotate-x">
                     <div class="dn-flipcard-card dn-flipcard-shadow dn-flipcard-card-rotate-x">
                         <div class="dn-flipcard-front dn-flipcard-face">
@@ -54,12 +62,12 @@
                 </div>
             </div>
             <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
-                <!--3rd card-->
+                
                 <div class="dn-flipcard-container dn-flipcard-container-rotate-y">
                     <div class="dn-flipcard-card dn-flipcard-shadow dn-flipcard-card-rotate-y">
                         <div class="dn-flipcard-front dn-flipcard-face">
                             <img src="./images/about/card-contact.jpg" class="img-responsive" />
-                            <div class="dn-about-card-caption"><i class="fa fa-envelope"></i> Contact</div>
+                            <div class="dn-flipcard-caption"><i class="fa fa-envelope"></i> Contact</div>
                         </div>
                         <div class="dn-flipcard-back dn-flipcard-face center">
                             <p>This is nice for exposing more information about an image.</p>
@@ -69,7 +77,7 @@
                 </div>
             </div>
             <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
-                <!--4th card-->
+                
                 <div class="dn-flipcard-container dn-flipcard-container-rotate-x">
                     <div class="dn-flipcard-card dn-flipcard-shadow dn-flipcard-card-rotate-x">
                         <div class="dn-flipcard-front dn-flipcard-face">
@@ -83,7 +91,7 @@
                     </div>
                 </div>    
             </div>
-            
+            -->
             
         </div>
     
