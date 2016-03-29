@@ -9,7 +9,7 @@ app.factory('personService', ['$http', 'appSettings', function ($http, appSettin
     };
     
     var _getCards = function () { 
-        return $http.get(serviceBase + 'api/person/cards')
+        return $http.get(serviceBase + 'api/person/card/all') 
             .then(function (response) { return response.data; });
     };
     
