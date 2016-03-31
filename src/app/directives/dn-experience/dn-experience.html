@@ -1,3 +1,47 @@
+<uib-carousel active="active" template-url="app/directives/dn-experience/dn-experience-carousel.html">
+    <uib-slide ng-repeat="job in jobs track by job.id" index="slide.id" template-url="app/directives/dn-experience/dn-experience-slide.html">
+        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+            <div class="text-center">
+                <h2 class="dn-experience-h2" alt="{{ job.companyName }}" title="{{ job.companyName }}">{{ job.companyName }}</h2>
+            </div>
+            <div class="text-center">
+                <img ng-src="images/experience/{{ job.imageUrl }}" 
+                    class="img-thumbnail img-circle" 
+                    ng-class-even="'dn-img-thumbnail-even'"
+                    ng-class-odd="'dn-img-thumbnail-odd'" 
+                    alt="{{ job.companyName }} logo" 
+                    title="{{ job.companyName }} logo" />
+            </div>
+        </div>
+        <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
+            <div class="row">
+                <div class="col-lg-7 col-md-7 col-sm-7 col-xs-12">
+                    <h3 class="dn-experience-h3" alt="{{ job.roleTitle }}" 
+                        title="{{ job.roleTitle }}">
+                        <i class="fa fa-black-tie"></i> {{ job.roleTitle }}
+                    </h3>
+                </div>
+                <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12 text-right">
+                    <h4 class="dn-h4 dn-experience-h4">
+                        {{ job.startDate | date: 'MMM yyyy' }} - {{ job.endDate | date: 'MMM yyyy' }} <i class="fa fa-calendar"></i>
+                    </h4>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 dn-experience-description" ng-bind-html="job.description">
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-right">
+            <a ng-href="{{ job.websiteUrl }}" class="dn-link">{{ job.websiteUrl }}</a> <i class="fa fa-globe dn-link-icon"></i>
+        </div>
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
+            <dn-tag-cloud tags="job.skills" container="true"></dn-tag-cloud> 
+        </div>
+    </uib-slide>
+</uib-carousel>
+
+<!--
 <div class="row dn-experience" ng-repeat="job in jobs" ng-class-even="'dn-experience-even'" 
     ng-class-odd="'dn-experience-odd'">
     <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
@@ -36,4 +80,4 @@
     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
         <dn-tag-cloud tags="job.skills" container="true"></dn-tag-cloud> 
     </div>
-</div>
+</div>-->
