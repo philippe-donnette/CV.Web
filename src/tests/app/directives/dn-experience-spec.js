@@ -6,6 +6,8 @@
         var element, scope, template;
 
         beforeEach(module('dnApp'));
+        beforeEach(module('app/directives/dn-experience/dn-experience-carousel.html'));               
+        beforeEach(module('app/directives/dn-experience/dn-experience-slide.html'));
         beforeEach(module('app/directives/dn-experience/dn-experience.html', function($provide){
             $provide.factory('dnTagCloudDirective', function(){ return {}; });
         }));
@@ -15,6 +17,7 @@
 
             scope.jobs = [
                 { 
+                    id: 1,
                     company: "University of London",
                     role: "Senior Developer", 
                     description: "Some description about the role goes here, do not make it too long as this is not something people might be very interested to read",
@@ -28,6 +31,7 @@
                     ] 
                 },
                 { 
+                    id:2, 
                     company: "DOCDATA Limited",
                     role: "Senior Developer", 
                     description: "Some description about the role goes here, do not make it too long as this is not something people might be very interested to read",
@@ -49,16 +53,16 @@
             scope.$digest();
         }));
 
-        it('Should have an element div with class dn-experience', function () {
-            expect(element[0].children[0].className).toContain("dn-experience");
+        it('Should have an element div with class carousel', function () {
+            expect(element[0].children[0].className).toContain("carousel");
         });
 
-        it('First element of jobs should have class dn-experience-odd', function () {
-            expect(element[0].children[0].className).toContain("dn-experience-odd");
+        it('Should match number of slides with scope jobs length', function () {
+            expect(element[0].children[0].querySelectorAll("[template-url='app/directives/dn-experience/dn-experience-slide.html']").length).toBe(scope.jobs.length);
         });
         
-        it('Second element of jobs should have class dn-experience-even', function () {
-            expect(element[0].children[1].className).toContain("dn-experience-even");
+        it('Should have a matching template url', function () {
+            expect(element[0].querySelectorAll("[template-url='app/directives/dn-experience/dn-experience-carousel.html']").length).toBe(1);
         });
 
     });
