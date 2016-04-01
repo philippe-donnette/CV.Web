@@ -5,16 +5,25 @@ app.controller('projectController', ['$scope', '$stateParams', 'projectService',
         projectService.getProject($stateParams.id).then(
             function (project) {
                 $scope.project = project;
-                return loadProjectDetails($scope.project.id);
+                return loadProjectDetails($scope.project.id, $scope.project.name);
             },
             function (error) {
             }
         );
     };
     
-    var loadProjectDetails = function (id) {
+    var loadProjectDetails = function (id, projectName) {
         loadSkills(id);    
         loadImages(id);
+        loadBreadcrumb(projectName);
+    };
+    
+    var loadBreadcrumb = function (currentPageTitle) {
+        $scope.breadcrumb = [
+            { title: 'Home', url: 'root.home', iconClass: 'fa fa-home' },
+            { title: 'Projects', url: 'root.projects', iconClass: 'fa fa-suitcase' },
+            { title: currentPageTitle, url: null, iconClass: 'fa fa-suitcase' }
+        ];
     };
     
     var loadSkills = function (id) {

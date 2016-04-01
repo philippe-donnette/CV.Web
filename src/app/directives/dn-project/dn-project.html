@@ -1,12 +1,10 @@
-<h1>{{ project.name }}</h1>
-
 <div class="row">
-    <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 text-center">
+    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 text-center">
         <img ng-src="images/projects/{{ project.primaryImage }}" 
                     class="img-responsive dn-img-main-project"
                     alt="{{ project.name }}" title="{{ project.name }}" />
     </div>
-    <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12" ng-bind-html="project.description">
+    <div class="col-lg-8 col-md-8 col-sm-6 col-xs-12" ng-bind-html="project.description">
     </div>
 </div>    
 
