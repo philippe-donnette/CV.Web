@@ -32,6 +32,10 @@ body {
     height: auto;
 }
 
+.dn-img-gallery {
+    background: @dn-gallery-border-color;
+}
+
 .dn-intro {
     text-align: center;
 	color: @dn-home-intro-text;
@@ -279,6 +283,8 @@ a.dn-link {
 .dn-tag-well {
     background: @dn-tag-cloud-bg;
     border-color: @dn-tag-cloud-border;
+    border: none;
+    box-shadow: none;
     margin: 10px;
 }
 
@@ -289,6 +295,7 @@ a.dn-link {
 
 .dn-gallery-items > li {
     vertical-align: middle;
+    border: 0;
 }
 
 
@@ -813,5 +820,25 @@ a.dn-btn-close {
 .dn-breadcrumb {
     margin-top: 25px;
     display: inline-block;
+    background: @dn-breadcrumb-bg;
+}
+
+.dn-breadcrumb > .active {
+    color: @dn-breadcrumb-active-color;
+}
+
+.dn-breadcrumb > li > a {
+    color: @dn-breadcrumb-link-color;
 }
 /*** end breadcrumb ***/
+
+.dn-h1 {
+    color: @dn-h1-color;
+}
+@media screen and (max-width: 400px) {
+    .dn-h1 {
+        color: @dn-h1-color;
+        font-size: 1.5em;
+        margin-bottom: 0px;
+    }
+}
