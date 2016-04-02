@@ -4,7 +4,7 @@
     </div>
     <div class="col-lg-6 col-md-8 col-sm-7 col-xs-12">
         <ol class="breadcrumb dn-breadcrumb pull-right">
-            <li ng-repeat="bc in breadcrumb" ng-class="{ 'active': bc.url == null }"></li>
+            <li ng-repeat="bc in breadcrumb" ng-class="{ 'active': bc.url == null }"><a href="{{ bc.url }}" ng-show="{{ bc.url != null }}"><i class="{{ bc.iconClass }}"></i> {{ bc.title }}</a><span ng-show="{{ bc.url == null }}"><i class="{{ bc.iconClass }}"></i> {{ bc.title }}</span></li>
         </ol>
     </div>
 </div>

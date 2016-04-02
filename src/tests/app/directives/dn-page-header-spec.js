@@ -66,6 +66,82 @@
             });
         });
         
+        it('Should have li with an a tag visible for each breadcrumb items with url not null or undefined', function () {
+            var olElt = element[0].querySelector("ol");
+            var liElts = olElt.querySelectorAll("li");
+            var i = 0;
+            angular.forEach(liElts, function (elt) {
+                if(scope.breadcrumb[i].url == null || scope.breadcrumb[i].url == undefined) {
+                    expect(elt.querySelector("a").className).toContain("ng-hide");   
+                }
+                else {
+                    expect(elt.querySelector("a").className).not.toContain("ng-hide");   
+                }
+                i++;    
+            });
+        });
+        
+        it('Should have li with a span tag visible for each breadcrumb items with url null or undefined', function () {
+            var olElt = element[0].querySelector("ol");
+            var liElts = olElt.querySelectorAll("li");
+            var i = 0;
+            angular.forEach(liElts, function (elt) {
+                if(scope.breadcrumb[i].url == null || scope.breadcrumb[i].url == undefined) {
+                    expect(elt.querySelector("span").className).not.toContain("ng-hide");   
+                }
+                else {
+                    expect(elt.querySelector("span").className).toContain("ng-hide");   
+                }
+                i++;    
+            });
+        });
+        
+        it('Should have li with an a tag containing an i tag with class matching scope iconClass for each breadcrumb items', function () {
+            var olElt = element[0].querySelector("ol");
+            var liElts = olElt.querySelectorAll("li");
+            var i = 0;
+            angular.forEach(liElts, function (elt) {
+                var aElt = elt.querySelector("a");
+                var iElt = aElt.querySelector("i");
+                expect(iElt.className).toContain(scope.breadcrumb[i].iconClass);   
+                i++;    
+            });
+        });
+        
+        it('Should have li with an a tag containing text matching scope title for each breadcrumb items', function () {
+            var olElt = element[0].querySelector("ol");
+            var liElts = olElt.querySelectorAll("li");
+            var i = 0;
+            angular.forEach(liElts, function (elt) {
+                var aElt = elt.querySelector("a");
+                expect(aElt.innerHTML).toContain(scope.breadcrumb[i].title);   
+                i++;    
+            });
+        });
+        
+        it('Should have li with a span tag containing an i tag with class matching scope iconClass for each breadcrumb items', function () {
+            var olElt = element[0].querySelector("ol");
+            var liElts = olElt.querySelectorAll("li");
+            var i = 0;
+            angular.forEach(liElts, function (elt) {
+                var spanElt = elt.querySelector("span");
+                var iElt = spanElt.querySelector("i");
+                expect(iElt.className).toContain(scope.breadcrumb[i].iconClass);   
+                i++;    
+            });
+        });
+        
+        it('Should have li with a span tag containing text matching scope title for each breadcrumb items', function () {
+            var olElt = element[0].querySelector("ol");
+            var liElts = olElt.querySelectorAll("li");
+            var i = 0;
+            angular.forEach(liElts, function (elt) {
+                var spanElt = elt.querySelector("span");
+                expect(spanElt.innerHTML).toContain(scope.breadcrumb[i].title);   
+                i++;    
+            });
+        });
+        
     });
 
 })();
