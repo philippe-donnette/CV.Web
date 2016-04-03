@@ -1,10 +1,12 @@
 app.controller('projectController', ['$scope', '$stateParams', 'projectService', function ($scope, $stateParams, projectService) {
 
+    $scope.header = { iconClass: 'fa fa-suitcase', title: null };
     
     var init = function () {
         projectService.getProject($stateParams.id).then(
             function (project) {
                 $scope.project = project;
+                $scope.header.title = $scope.project.name;
                 return loadProjectDetails($scope.project.id, $scope.project.name);
             },
             function (error) {

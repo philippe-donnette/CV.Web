@@ -1,16 +1,4 @@
-<!--<div class="row dn-intro">
-    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 dn-intro-pic pull-right hidden-sm hidden-xs">
-        <img ng-src="./images/{{ person.aboutImage }}" class="dn-img-thumbnail img-circle center-block" />
-        <div class="dn-intro-text">
-            <span class="dn-name">{{ person.aboutCaption }}</span>
-            <hr class="dn-star-light">
-            <span class="dn-skills">{{ person.aboutMotto }}</span>
-        </div>
-    </div>
-    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 dn-intro-tag" ng-bind-html="person.aboutText">
-    </div>
-</div>-->
-
+<dn-page-header title="header.title" icon-class="header.iconClass" breadcrumb="breadcrumb"></dn-page-header>
 
 <div class="row">
     <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 dn-about-me">
@@ -20,7 +8,6 @@
         <img src="./images/about/me-lg.png" class="img-responsive visible-lg center-block" />
     </div>
     <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12">
-    
         <div class="row">
     
             <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12" ng-repeat="card in cards">
@@ -30,70 +17,6 @@
                     rotate="card.rotate"></dn-flipcard> 
             </div>
     
-            <!--
-            <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
-                
-                <div class="dn-flipcard-container dn-flipcard-container-rotate-y">
-                    <div class="dn-flipcard-card dn-flipcard-shadow dn-flipcard-card-rotate-y">
-                        <div class="dn-flipcard-front dn-flipcard-face">
-                            <img src="./images/about/card-contact.jpg" class="img-responsive" />
-                            <div class="dn-about-card-caption"><i class="fa fa-group"></i> Family</div>
-                        </div>
-                        <div class="dn-flipcard-back dn-flipcard-face center">
-                            <p>This is nice for exposing more information about an image.</p>
-                            <p>Any content can go here.</p>
-                        </div>
-                    </div>
-                </div>    
-            </div>
-            <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
-                
-                <div class="dn-flipcard-container dn-flipcard-container-rotate-x">
-                    <div class="dn-flipcard-card dn-flipcard-shadow dn-flipcard-card-rotate-x">
-                        <div class="dn-flipcard-front dn-flipcard-face">
-                            <img src="./images/about/card-contact.jpg" class="img-responsive" />
-                            <div class="dn-about-card-caption"><i class="fa fa-map-marker"></i> Location</div>
-                        </div>
-                        <div class="dn-flipcard-back dn-flipcard-face center">
-                            <p class="dn-flipcard-loc-city">London SE8</p>
-                            <p class="dn-flipcard-loc-country">United Kingdom</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
-                
-                <div class="dn-flipcard-container dn-flipcard-container-rotate-y">
-                    <div class="dn-flipcard-card dn-flipcard-shadow dn-flipcard-card-rotate-y">
-                        <div class="dn-flipcard-front dn-flipcard-face">
-                            <img src="./images/about/card-contact.jpg" class="img-responsive" />
-                            <div class="dn-flipcard-caption"><i class="fa fa-envelope"></i> Contact</div>
-                        </div>
-                        <div class="dn-flipcard-back dn-flipcard-face center">
-                            <p>This is nice for exposing more information about an image.</p>
-                            <p>Any content can go here.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
-                
-                <div class="dn-flipcard-container dn-flipcard-container-rotate-x">
-                    <div class="dn-flipcard-card dn-flipcard-shadow dn-flipcard-card-rotate-x">
-                        <div class="dn-flipcard-front dn-flipcard-face">
-                            <img src="./images/about/card-contact.jpg" class="img-responsive" />
-                            <div class="dn-about-card-caption"><i class="fa fa-soccer-ball-o"></i> Football</div>
-                        </div>
-                        <div class="dn-flipcard-back dn-flipcard-face center">
-                            <p>This is nice for exposing more information about an image.</p>
-                            <p>Any content can go here.</p>
-                        </div>
-                    </div>
-                </div>    
-            </div>
-            -->
-            
         </div>
-    
     </div>
 </div>

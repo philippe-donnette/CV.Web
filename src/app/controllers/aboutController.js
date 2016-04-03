@@ -1,5 +1,11 @@
 app.controller('aboutController', ['$scope', 'personService', function ($scope, personService) {
     
+    $scope.header = { iconClass: 'fa fa-user', title: 'About Me' };
+    $scope.breadcrumb = [
+        { iconClass: 'fa fa-home', title: 'Home', url: 'root.home' },
+        { iconClass: 'fa fa-user', title: 'About Me' }
+    ];
+    
     var init = function () {
         loadPerson();
         loadCards();    

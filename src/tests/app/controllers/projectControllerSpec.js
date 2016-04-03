@@ -44,10 +44,33 @@
         }));
         
         
-        it("Should have project, images and skills set", function() {
+        it("Should have project, images and tags set", function() {
             expect(scope.project).not.toBe(null);
             expect(scope.project.images).not.toBe(null);
-            expect(scope.project.skills).not.toBe(null);
+            expect(scope.project.tags).not.toBe(null);
+            expect(scope.project).not.toBe(undefined);
+            expect(scope.project.images).not.toBe(undefined);
+            expect(scope.project.tags).not.toBe(undefined);
+        });
+        
+        it("Should have breadcrumb set", function() {
+            expect(scope.breadcrumb).not.toBe(null);
+            expect(scope.breadcrumb).not.toBe(undefined);
+        });
+        
+        it("Should have header set", function() {
+            expect(scope.header).not.toBe(null);
+            expect(scope.header).not.toBe(undefined);
+        });
+        
+        it("Should have header title set", function() {
+            expect(scope.header.title).not.toBe(null);
+            expect(scope.header.title).not.toBe(undefined);
+        });
+        
+        it("Should have header iconClass set", function() {
+            expect(scope.header.iconClass).not.toBe(null);
+            expect(scope.header.iconClass).not.toBe(undefined);
         });
         
         it("Should call getImages from projectService", function() {

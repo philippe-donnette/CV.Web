@@ -59,6 +59,26 @@
             expect(personService.getCards).toHaveBeenCalled();
             expect(scope.cards.length).toBe(2);
         });
+        
+        it("Should have breadcrumb set", function() {
+            expect(scope.breadcrumb).not.toBe(null);
+            expect(scope.breadcrumb).not.toBe(undefined);
+        });
+        
+        it("Should have header set", function() {
+            expect(scope.header).not.toBe(null);
+            expect(scope.header).not.toBe(undefined);
+        });
+        
+        it("Should have header title set", function() {
+            expect(scope.header.title).not.toBe(null);
+            expect(scope.header.title).not.toBe(undefined);
+        });
+        
+        it("Should have header iconClass set", function() {
+            expect(scope.header.iconClass).not.toBe(null);
+            expect(scope.header.iconClass).not.toBe(undefined);
+        });
     });
 
 })();

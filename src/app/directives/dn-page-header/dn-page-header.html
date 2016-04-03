@@ -1,7 +1,7 @@
 <div class="row">
     <div class="col-lg-6 col-md-4 col-sm-5 hidden-xs">
         <h1 class="dn-h1"><i class="{{ iconClass }}"></i> {{ title }}</h1>
-    </div>
+    </div> 
     <div class="col-lg-6 col-md-8 col-sm-7 col-xs-12">
         <ol class="breadcrumb dn-breadcrumb pull-right">
             <li ng-repeat="bc in breadcrumb" ng-class="{ 'active': bc.url == null }"><a href="{{ bc.url }}" ng-show="{{ bc.url != null }}"><i class="{{ bc.iconClass }}"></i> {{ bc.title }}</a><span ng-show="{{ bc.url == null }}"><i class="{{ bc.iconClass }}"></i> {{ bc.title }}</span></li>

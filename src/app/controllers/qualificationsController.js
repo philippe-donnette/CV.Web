@@ -1,5 +1,11 @@
 app.controller('qualificationsController', ['$scope', 'qualificationService', 'trainingService', function ($scope, qualificationService, trainingService) {
     
+    $scope.header = { iconClass: 'glyphicon glyphicon-education', title: 'Qualifications' };
+    $scope.breadcrumb = [
+        { iconClass: 'fa-home', title: 'Home', url: 'root.home' },
+        { iconClass: 'glyphicon glyphicon-education', title: 'Qualifications' }
+    ];
+    
     var init = function () {
         qualificationService.getQualifications()
             .then(

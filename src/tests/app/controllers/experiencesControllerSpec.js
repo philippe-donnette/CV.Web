@@ -42,8 +42,33 @@
             });
         });
     
+        it('Should have jobs set', function () {
+            expect(scope.jobs).not.toBe(null);
+            expect(scope.jobs).not.toBe(undefined);
+        });
+    
         it("Should call getExperiences from experienceService", function() {
             expect(experienceService.getExperiences).toHaveBeenCalled();
+        });
+        
+        it("Should have breadcrumb set", function() {
+            expect(scope.breadcrumb).not.toBe(null);
+            expect(scope.breadcrumb).not.toBe(undefined);
+        });
+        
+        it("Should have header set", function() {
+            expect(scope.header).not.toBe(null);
+            expect(scope.header).not.toBe(undefined);
+        });
+        
+        it("Should have header title set", function() {
+            expect(scope.header.title).not.toBe(null);
+            expect(scope.header.title).not.toBe(undefined);
+        });
+        
+        it("Should have header iconClass set", function() {
+            expect(scope.header.iconClass).not.toBe(null);
+            expect(scope.header.iconClass).not.toBe(undefined);
         });
         
     });
