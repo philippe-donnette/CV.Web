@@ -749,3 +749,49 @@ a.dn-btn-close {
     margin-bottom: 0px;
   }
 }
+.dn-well-training {
+  background: brown;
+}
+.dn-training-h2 {
+  color: #fff;
+}
+.dn-study {
+  background: brown;
+}
+.dn-study-h3 {
+  color: #edd1a4;
+  margin-top: 0px;
+}
+.dn-study-h4 {
+  color: gold;
+}
+hr.dn-study-star-light {
+  border-color: gold;
+  margin-bottom: 15px;
+}
+hr.dn-study-star-light:after {
+  background-color: brown;
+  color: gold;
+}
+hr.dn-training-star-light {
+  border-color: brown;
+  margin-bottom: 15px;
+}
+hr.dn-training-star-light:after {
+  background-color: #fff;
+  color: brown;
+}
+.dn-no-marpad-bottom {
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+}
+.dn-no-marpad-top {
+  margin-top: 0px;
+  padding-top: 0px;
+}
+.dn-training-h3 {
+  color: brown;
+}
+.dn-training-h4 {
+  color: #edd1a4;
+}
