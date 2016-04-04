@@ -795,3 +795,22 @@ hr.dn-training-star-light:after {
 .dn-training-h4 {
   color: #edd1a4;
 }
+hr.dn-experience-star-light {
+  border-color: gold;
+  margin-bottom: 15px;
+}
+hr.dn-experience-star-light:after {
+  background-color: brown;
+  color: gold;
+}
+hr.dn-project-star-light {
+  border-color: gold;
+  margin-bottom: 15px;
+}
+hr.dn-project-star-light:after {
+  background-color: brown;
+  color: gold;
+}
+.dn-project-well {
+  background: brown;
+}
