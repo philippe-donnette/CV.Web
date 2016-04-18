@@ -205,6 +205,58 @@ a.dn-link {
   color: #c30000;
   font-size: 18px;
 }
+/***Skills page tags - START ***/
+.dn-skills-container .dn-tag-1,
+.dn-skills-container .dn-tag-icon-1 {
+  color: #7e602c;
+  font-size: 12px;
+}
+.dn-skills-container .dn-tag-2,
+.dn-skills-container .dn-tag-icon-2 {
+  color: #c37a00;
+  font-size: 15px;
+}
+.dn-skills-container .dn-tag-3,
+.dn-skills-container .dn-tag-icon-3 {
+  color: #7e602c;
+  font-size: 18px;
+}
+.dn-skills-container .dn-tag-4,
+.dn-skills-container .dn-tag-icon-4 {
+  color: #633e00;
+  font-size: 21px;
+}
+.dn-skills-container .dn-tag-5,
+.dn-skills-container .dn-tag-icon-5 {
+  color: #650281;
+  font-size: 24px;
+}
+.dn-skills-container .dn-tag-6,
+.dn-skills-container .dn-tag-icon-6 {
+  color: #650281;
+  font-size: 27px;
+}
+.dn-skills-container .dn-tag-7,
+.dn-skills-container .dn-tag-icon-7 {
+  color: #481e53;
+  font-size: 30px;
+}
+.dn-skills-container .dn-tag-8,
+.dn-skills-container .dn-tag-icon-8 {
+  color: #de5c5c;
+  font-size: 33px;
+}
+.dn-skills-container .dn-tag-9,
+.dn-skills-container .dn-tag-icon-9 {
+  color: #de3333;
+  font-size: 36px;
+}
+.dn-skills-container .dn-tag-10,
+.dn-skills-container .dn-tag-icon-10 {
+  color: #c30000;
+  font-size: 39px;
+}
+/***Skills tags page - END**/
 .dn-panel {
   border-color: brown;
   background: #edd1a4;
@@ -634,6 +686,7 @@ a.dn-btn-close {
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
   border-radius: 10px;
+  margin-bottom: 20px;
 }
 .dn-experience-inner > .item {
   display: none;
