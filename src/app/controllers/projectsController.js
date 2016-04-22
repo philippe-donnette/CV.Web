@@ -2,7 +2,7 @@ app.controller('projectsController', ['$scope', 'projectService', function ($sco
 
     $scope.header = { iconClass: 'fa fa-suitcase', title: 'Projects' };
     $scope.breadcrumb = [
-        { iconClass: 'fa fa-home', title: 'Home', url: 'root.home' },
+        { iconClass: 'fa fa-home', title: 'Home', url: 'home' },
         { iconClass: 'fa fa-suitcase', title: 'Projects' }
     ];
 

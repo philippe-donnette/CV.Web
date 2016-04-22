@@ -14,7 +14,7 @@
             scope.title = 'Awesome project';
             scope.iconClass = 'fa fa-suitcase';
             scope.breadcrumb = [
-                { title: 'Home', url: 'root.home', iconClass: 'fa fa-home' },
+                { title: 'Home', url: 'home', iconClass: 'fa fa-home' },
                 { title: 'Projects', url: 'root.projects', iconClass: 'fa fa-suitcase' },
                 { title: 'Awesome project', url: null, iconClass: 'fa fa-suitcase' }
             ];

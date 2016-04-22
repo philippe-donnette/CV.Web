@@ -2,7 +2,7 @@ app.controller('qualificationsController', ['$scope', 'qualificationService', 't
     
     $scope.header = { iconClass: 'glyphicon glyphicon-education', title: 'Qualifications' };
     $scope.breadcrumb = [
-        { iconClass: 'fa fa-home', title: 'Home', url: 'root.home' },
+        { iconClass: 'fa fa-home', title: 'Home', url: 'home' },
         { iconClass: 'glyphicon glyphicon-education', title: 'Qualifications' }
     ];
     

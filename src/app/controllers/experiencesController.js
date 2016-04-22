@@ -2,7 +2,7 @@ app.controller('experiencesController', ['$scope', 'experienceService', function
     
     $scope.header = { iconClass: 'fa fa-lightbulb-o', title: 'Experience' };
     $scope.breadcrumb = [
-        { iconClass: 'fa fa-home', title: 'Home', url: 'root.home' },
+        { iconClass: 'fa fa-home', title: 'Home', url: 'home' },
         { iconClass: 'fa fa-lightbulb-o', title: 'Experience' }
     ];
       

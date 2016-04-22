@@ -2,7 +2,7 @@ app.controller('aboutController', ['$scope', 'personService', function ($scope, 
     
     $scope.header = { iconClass: 'fa fa-user', title: 'About Me' };
     $scope.breadcrumb = [
-        { iconClass: 'fa fa-home', title: 'Home', url: 'root.home' },
+        { iconClass: 'fa fa-home', title: 'Home', url: 'home' },
         { iconClass: 'fa fa-user', title: 'About Me' }
     ];
     

@@ -22,8 +22,8 @@ app.controller('projectController', ['$scope', '$stateParams', 'projectService',
     
     var loadBreadcrumb = function (currentPageTitle) {
         $scope.breadcrumb = [
-            { title: 'Home', url: 'root.home', iconClass: 'fa fa-home' },
-            { title: 'Projects', url: 'root.projects', iconClass: 'fa fa-suitcase' },
+            { title: 'Home', url: 'home', iconClass: 'fa fa-home' },
+            { title: 'Projects', url: 'projects', iconClass: 'fa fa-suitcase' },
             { title: currentPageTitle, url: null, iconClass: 'fa fa-suitcase' }
         ];
     };
