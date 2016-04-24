@@ -794,6 +794,9 @@ a.dn-btn-close {
 .dn-breadcrumb > li > a {
   color: brown;
 }
+.dn-breadcrumb > li > a:hover {
+  text-decoration: none;
+}
 /*** end breadcrumb ***/
 .dn-h1 {
   color: brown;
