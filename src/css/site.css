@@ -477,6 +477,12 @@ a.dn-btn-close {
   .dn-flipcard-loc-country {
     font-size: 2em;
   }
+  .dn-flipcard-face.dn-flipcard-back > p {
+    font-size: 1em !important;
+  }
+}
+.dn-flipcard-face.dn-flipcard-back > p {
+  font-size: 1.5em;
 }
 .dn-flipcard-container {
   -webkit-perspective: 1000px;
