@@ -457,6 +457,9 @@ a.dn-btn-close {
   .dn-flipcard-loc-country {
     font-size: 3em;
   }
+  .dn-flipcard-face.dn-flipcard-back > p {
+    font-size: 1.5em !important;
+  }
 }
 @media (max-width: 767px) {
   .dn-flipcard-container {
@@ -482,7 +485,7 @@ a.dn-btn-close {
   }
 }
 .dn-flipcard-face.dn-flipcard-back > p {
-  font-size: 1.5em;
+  font-size: 1em;
 }
 .dn-flipcard-container {
   -webkit-perspective: 1000px;
@@ -878,4 +881,7 @@ hr.dn-project-star-light:after {
 }
 .dn-project-well {
   background: brown;
+}
+.dn-img-center {
+  margin: auto;
 }
