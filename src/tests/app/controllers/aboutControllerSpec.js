@@ -9,7 +9,7 @@
             module('dnApp', function ($provide) { 
                 $provide.value('personService', mockPersonService);
              });
-            
+             
             inject(function ($q) { 
                 mockPersonService.getPerson = function() {
                     var defer = $q.defer();

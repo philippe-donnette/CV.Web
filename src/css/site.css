@@ -903,3 +903,23 @@ hr.dn-project-star-light:after {
 }
 */
 /***START MASONRY***/
+.dn-bt-primary {
+  color: brown;
+  background: #edd1a4;
+  border-color: brown;
+}
+.dn-bt-primary:hover {
+  color: #edd1a4;
+  background: brown;
+  border-color: #edd1a4;
+}
+.dn-bt-secondary {
+  color: #edd1a4;
+  background: brown;
+  border-color: #edd1a4;
+}
+.dn-bt-secondary:hover {
+  color: brown;
+  background: #edd1a4;
+  border-color: brown;
+}
