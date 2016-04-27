@@ -1,18 +1,8 @@
-<!--<ul class="list-inline well dn-gallery-items text-center">
-    <li ng-repeat="image in images">
-        <img ng-src="images/projects/gallery/{{ image.imageUrl }}" alt="{{ image.title }}" class="img-responsive dn-lk-image img-thumbnail dn-img-gallery" ng-click="openImage(image)" />
-    </li>
-</ul>-->
-
 <div masonry>
     <div class="masonry-brick" ng-repeat="image in images">
         <img ng-src="images/projects/gallery/{{ image.imageUrl }}" alt="{{ image.title }}" 
             class="img-responsive dn-lk-image img-thumbnail dn-img-gallery" 
             ng-click="openImage(image)" />
-        <!--<img ng-src="{{ item.dataUri.thumbnail }}" 
-            class="img-responsive dn-img-thumb" 
-            alt="{{ item.originalFilename }}" 
-            ng-click="openLarge(item)">-->
     </div>
 </div>
 
