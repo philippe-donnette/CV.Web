@@ -1,4 +1,4 @@
-var app = angular.module('dnApp', ['ngSanitize', 'ui.router', 'ui.bootstrap']);
+var app = angular.module('dnApp', ['ngSanitize', 'ui.router', 'ui.bootstrap', 'wu.masonry']);
 
 app.config(function ($stateProvider, $urlRouterProvider, $locationProvider) {
     

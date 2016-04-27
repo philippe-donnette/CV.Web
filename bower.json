@@ -17,6 +17,8 @@
     "angular-mocks": "~1.4.9",
     "fontawesome": "~4.5.0",
     "angular-sanitize": "~1.4.9",
-    "devicons": "~1.8.0"
+    "devicons": "~1.8.0",
+    "angular-masonry": "~0.16.0",
+    "get-size": "~2.0.2"
   }
 }

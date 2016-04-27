@@ -885,3 +885,20 @@ hr.dn-project-star-light:after {
 .dn-img-center {
   margin: auto;
 }
+/***START MASONRY***/
+/*
+.masonry-brick {
+  margin: 2px;
+  display: none;
+  border: 0 solid black;
+  padding: 3px;
+  margin-bottom: 10px;
+  width: 220px;
+  background: #fff; 
+}
+
+.masonry-brick.loaded {
+  display: block; 
+}
+*/
+/***START MASONRY***/
