@@ -48,9 +48,9 @@
             var panels = element[0].children[0].getElementsByClassName("panel");
             angular.forEach(scope.items, function (item) {
                 if (item.websiteUrl == undefined || item.websiteUrl == null)
-                    expect(panels[i].querySelector(".dn-btn-website").className).toContain('ng-hide');
+                    expect(panels[i].querySelector(".dn-bt-primary").className).toContain('ng-hide');
                 else
-                    expect(panels[i].querySelector(".dn-btn-website").className).not.toContain('ng-hide');
+                    expect(panels[i].querySelector(".dn-bt-primary").className).not.toContain('ng-hide');
                 i++;
             });
         });
@@ -60,9 +60,9 @@
             var panels = element[0].children[0].getElementsByClassName("panel");
             angular.forEach(scope.items, function (item) {
                 if (item.certificateFile == undefined || item.certificateFile == null)
-                    expect(panels[i].querySelector(".dn-btn-certificate").className).toContain('ng-hide');
+                    expect(panels[i].querySelector(".dn-bt-secondary").className).toContain('ng-hide');
                 else
-                    expect(panels[i].querySelector(".dn-btn-certificate").className).not.toContain('ng-hide');
+                    expect(panels[i].querySelector(".dn-bt-secondary").className).not.toContain('ng-hide');
                 i++;
             });
         });

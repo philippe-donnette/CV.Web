@@ -48,9 +48,9 @@
             var thumbs = element[0].children[0].getElementsByClassName("thumbnail");
             angular.forEach(scope.studies, function (study) {
                 if (study.websiteUrl == undefined || study.websiteUrl == null)
-                    expect(thumbs[i].querySelector(".dn-btn-website").className).toContain('ng-hide');
+                    expect(thumbs[i].querySelector(".dn-bt-primary").className).toContain('ng-hide');
                 else
-                    expect(thumbs[i].querySelector(".dn-btn-website").className).not.toContain('ng-hide');
+                    expect(thumbs[i].querySelector(".dn-bt-primary").className).not.toContain('ng-hide');
                 i++;
             });
         });
@@ -60,9 +60,9 @@
             var thumbs = element[0].children[0].getElementsByClassName("thumbnail");
             angular.forEach(scope.studies, function (study) {
                 if (study.degreeFile == undefined || study.degreeFile == null)
-                    expect(thumbs[i].querySelector(".dn-btn-degree").className).toContain('ng-hide');
+                    expect(thumbs[i].querySelector(".dn-bt-secondary").className).toContain('ng-hide');
                 else
-                    expect(thumbs[i].querySelector(".dn-btn-degree").className).not.toContain('ng-hide');
+                    expect(thumbs[i].querySelector(".dn-bt-secondary").className).not.toContain('ng-hide');
                 i++;
             });
         });

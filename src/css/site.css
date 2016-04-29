@@ -407,7 +407,7 @@ a.dn-btn-close {
   height: auto;
 }
 .dn-trainings {
-  color: orange;
+  color: brown;
 }
 .dn-about-me {
   padding: 10px;
@@ -838,6 +838,9 @@ hr.dn-study-star-light {
   border-color: gold;
   margin-bottom: 15px;
 }
+.dn-training-panel {
+  background: #edd1a4;
+}
 hr.dn-study-star-light:after {
   background-color: brown;
   color: gold;
@@ -847,7 +850,7 @@ hr.dn-training-star-light {
   margin-bottom: 15px;
 }
 hr.dn-training-star-light:after {
-  background-color: #fff;
+  background-color: #edd1a4;
   color: brown;
 }
 .dn-no-marpad-bottom {
@@ -862,7 +865,7 @@ hr.dn-training-star-light:after {
   color: brown;
 }
 .dn-training-h4 {
-  color: #edd1a4;
+  color: orange;
 }
 hr.dn-experience-star-light {
   border-color: gold;
@@ -922,4 +925,10 @@ hr.dn-project-star-light:after {
   color: brown;
   background: #edd1a4;
   border-color: brown;
+}
+.btn:hover,
+.btn:focus,
+.btn.focus,
+.btn:active {
+  text-decoration: none;
 }

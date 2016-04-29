@@ -5,7 +5,7 @@
         </div>
     </div>
     <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12" ng-repeat="item in items">
-        <div class="panel">
+        <div class="panel dn-training-panel">
             <div class="panel-heading dn-no-marpad-bottom">
                 <ul class="list-inline dn-no-marpad-bottom">
                     <li>
@@ -24,8 +24,8 @@
                 <h4 class="dn-training-h4">{{ item.subject }}</h4>
                 <p ng-bind-html="item.description"></p>
                 <p>
-                    <a ng-href="images/trainings/{{ item.certificateFile }}" target="_blank" class="btn dn-bt-secondary btn-primary" role="button" ng-show="{{ item.certificateFile != null }}"><i class="fa fa-eye"></i> Certificate</a> 
-                    <a ng-href="{{ item.websiteUrl }}" target="_blank" class="btn dn-bt-primary btn-default" role="button" ng-show="{{ item.websiteUrl != null }}"><i class="fa fa-globe"></i> Website</a>
+                    <a ng-href="images/trainings/{{ item.certificateFile }}" target="_blank" class="btn dn-bt-secondary" role="button" ng-show="{{ item.certificateFile != null }}"><i class="fa fa-eye"></i> Certificate</a> 
+                    <a ng-href="{{ item.websiteUrl }}" target="_blank" class="btn dn-bt-primary" role="button" ng-show="{{ item.websiteUrl != null }}"><i class="fa fa-globe"></i> Website</a>
                 </p>
             </div>
         </div>

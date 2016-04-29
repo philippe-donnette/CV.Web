@@ -464,7 +464,7 @@ a.dn-btn-close {
 }
 
 .dn-trainings {
-    color: @dn-home-img-bg;
+    color: @dn-trainings-text-color;
 }
 
 
@@ -942,6 +942,10 @@ hr.dn-study-star-light {
     margin-bottom: 15px;
 }
 
+.dn-training-panel {
+    background: @dn-training-panel-bg;    
+}
+
 hr.dn-study-star-light:after {
     background-color: @dn-study-bg;
     color: @dn-study-star-light-color;
@@ -1043,4 +1047,8 @@ hr.dn-project-star-light:after {
     color: @dn-bt-secondary-hover-color;
     background: @dn-bt-secondary-hover-bg;
     border-color: @dn-bt-secondary-hover-color;
+}
+
+.btn:hover, .btn:focus, .btn.focus, .btn:active {
+    text-decoration: none;
 }
