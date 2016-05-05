@@ -33,10 +33,18 @@
           
         </ul>
         <ul class="nav navbar-nav navbar-right dn-padding-r-10">
-          <li>
+          <li uib-dropdown ui-sref-active="active">
+            <a href="#" uib-dropdown-toggle><i class="fa fa-ellipsis-h hidden-sm"></i></a>
+            <ul class="dropdown-menu">
+              <li><a ui-href="http://github.com" ng-click="navCollapsed = true"><i class="fa fa-github"></i> Github</a></li>
+              <li class="divider"></li>
+              <li><a ui-href="http://www.linkedin.com" ng-click="navCollapsed = true"><i class="fa fa-linkedin-square"></i> Linkedin</a></li>
+            </ul>
+          </li>
+          <!--<li>
             <a href="#" class="dn-linkedin"><i class="fa fa-linkedin-square"></i></a>
             <a href="#" class="dn-github"><i class="fa fa-github"></i></a>
-          </li>
+          </li>-->
         </ul>
       </div><!-- /.navbar-collapse -->
 </nav>
