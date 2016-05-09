@@ -19,7 +19,7 @@
                 { title: 'Awesome project', url: null, iconClass: 'fa fa-suitcase' }
             ];
             
-            template = angular.element("<dn-page-header title='title' icon-class='iconClass' breadcrumb='breadcrumb'></dn-page-header>");
+            template = angular.element("<dn-page-header page-title='title' icon-class='iconClass' breadcrumb='breadcrumb'></dn-page-header>");
 
             element = $compile(template)(scope);
             scope.$digest();

@@ -932,3 +932,8 @@ hr.dn-project-star-light:after {
 .btn:active {
   text-decoration: none;
 }
+.dn-well-about {
+  background: brown;
+  border: solid 3px brown;
+  color: white;
+}

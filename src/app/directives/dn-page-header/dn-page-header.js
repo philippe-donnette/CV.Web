@@ -4,7 +4,7 @@ app.directive('dnPageHeader', [function () {
     directive.restrict = "E";
     directive.transclude = true;
     directive.scope = {
-        title: "=",
+        pageTitle: "=",
         iconClass: "=",
         breadcrumb: "=" 
     };
