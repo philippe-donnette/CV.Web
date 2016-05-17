@@ -937,3 +937,6 @@ hr.dn-project-star-light:after {
   border: solid 3px brown;
   color: white;
 }
+.dn-experience-client li {
+  padding-top: 5px;
+}
