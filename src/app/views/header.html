@@ -34,11 +34,11 @@
         </ul>
         <ul class="nav navbar-nav navbar-right dn-padding-r-10">
           <li uib-dropdown ui-sref-active="active">
-            <a href="#" uib-dropdown-toggle><i class="fa fa-ellipsis-h hidden-sm"></i></a>
+            <a href="#" uib-dropdown-toggle><i class="fa fa-ellipsis-h"></i></a>
             <ul class="dropdown-menu">
-              <li><a ui-href="http://github.com" ng-click="navCollapsed = true"><i class="fa fa-github"></i> Github</a></li>
+              <li><a href="{{ person.gitHubUrl }}" ng-click="navCollapsed = true" target="_blank"><i class="fa fa-github"></i> Github</a></li>
               <li class="divider"></li>
-              <li><a ui-href="http://www.linkedin.com" ng-click="navCollapsed = true"><i class="fa fa-linkedin-square"></i> Linkedin</a></li>
+              <li><a href="{{ person.linkedinUrl }}" ng-click="navCollapsed = true" target="_blank"><i class="fa fa-linkedin-square"></i> Linkedin</a></li>
             </ul>
           </li>
           <!--<li>

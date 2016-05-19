@@ -1,4 +1,4 @@
-app.controller('headerController', ['$scope', 'projectService', function ($scope, projectService) {
+app.controller('headerController', ['$scope', 'projectService', 'personService', function ($scope, projectService, personService) {
       
     var init = function () {
         projectService.getProjects().then(
@@ -7,6 +7,14 @@ app.controller('headerController', ['$scope', 'projectService', function ($scope
             },
             function () {
                 $scope.projects = null;
+            }  
+        );
+        personService.getPerson().then(
+            function (data) {
+                $scope.person = data;
+            },
+            function () {
+                $scope.person = null;
             }  
         );
     };
