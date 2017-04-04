@@ -157,7 +157,7 @@ gulp.task('dist-fonts', function () {
 });
 
 gulp.task('dist-images', function () {
-    return gulp.src(['./src/images/*'])
+    return gulp.src(['./src/images/**/*'])
         .pipe(gulp.dest('./dist/images'));
 });
 
@@ -174,9 +174,13 @@ gulp.task('dist-directives', function () {
 gulp.task('dist-build', function () { 
     runSeq('dist-delete', 'dist-fonts', 'dist-images', 'dist-views',
     'dist-css-js-concat-min', 'dist-directives', 'dist-htaccess',
-    'dist-replace-apiUrl'); //, 'dist-bower-css');
+    'dist-replace-apiUrl');
 });
 
+// gulp.task('dist-build', function () { 
+//     runSeq('dist-delete', 'dist-fonts', 'dist-images', 'dist-views',
+//     'dist-css-js-concat-min', 'dist-directives', 'dist-htaccess');
+// });
 
 
 
