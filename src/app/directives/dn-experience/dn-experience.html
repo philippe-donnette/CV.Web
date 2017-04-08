@@ -23,7 +23,7 @@
                 </div>
                 <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12">
                     <h4 class="dn-h4 dn-experience-h4">
-                        <i class="fa fa-calendar"></i> {{ job.startDate | date: 'MMM yyyy' }} - {{ job.endDate | date: 'MMM yyyy' }} <i class="fa fa-calendar"></i>
+                        <i class="fa fa-calendar"></i> {{ job.startDate | date: 'MMM yyyy' }} - {{ job.endDate == null ? "Present" : (job.endDate | date: 'MMM yyyy') }} <i class="fa fa-calendar"></i>
                     </h4>
                 </div>
             </div>
