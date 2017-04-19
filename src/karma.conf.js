@@ -40,7 +40,7 @@ module.exports = function (config) {
             "app/views/*.html": "ng-html2js"
         },
         plugins: [
-            'karma-chrome-launcher',
+            'karma-phantomjs-launcher',
             'karma-jasmine',
             'karma-ng-html2js-preprocessor'
         ],
@@ -49,7 +49,22 @@ module.exports = function (config) {
         colors: true,
         logLevel: config.LOG_INFO,
         autoWatch: true,
-        browsers: ['Chrome'],
-        singleRun: false
+
+        customLaunchers: {
+            'PhantomJS_custom': {
+                base: 'PhantomJS',
+                options: {
+                windowName: 'my-window',
+                settings: {
+                    webSecurityEnabled: false
+                },
+                },
+                flags: ['--load-images=true'],
+                debug: false
+            }
+        },
+
+        browsers: ['PhantomJS', 'PhantomJS_custom'], //['Chrome'],
+        singleRun: true
     })
 }

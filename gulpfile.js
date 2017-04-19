@@ -7,7 +7,7 @@ var rev = require('gulp-rev');
 var uglify = require('gulp-uglify');
 var clean = require('gulp-clean');
 var htmlreplace = require('gulp-html-replace');
-var karma = require('gulp-karma');
+var Server = require('karma').Server;
 var install = require("gulp-install");
 var replace = require('gulp-replace');
 
@@ -187,7 +187,7 @@ gulp.task('dist-build', function () {
 //START REPLACE @@apiUrl in app.js
 gulp.task('dist-replace-apiUrl', function () {
     return gulp.src(['./dist/app-*.js'])
-    .pipe(replace('http://localhost:5000/', 'http://cvapi.donola.net/'))
+    .pipe(replace('http://localhost:5000/', 'http://cv-api.donola.net/'))
     .pipe(gulp.dest('./dist')); 
 });
 //END REPLACE @@apiUrl in app.js 
@@ -198,18 +198,10 @@ gulp.task('dist-replace-apiUrl', function () {
 
 
 
-gulp.task('run-test', function () {
-       var testFiles = [
-              //'tests/app/**/*Spec.js'
-           ];    
-       // Be sure to return the stream 
-       return gulp.src(testFiles)
-           .pipe(karma({
-               configFile: 'src/karma.conf.js',
-               action: 'watch'
-          }))
-          .on('error', function (err) {
-              // Make sure failed tests cause gulp to exit non-zero 
-              throw err;
-        });
+gulp.task('run-test', 
+    function (done) {
+  new Server({
+    configFile: __dirname + '/src/karma.conf.js',
+    singleRun: true
+  }, done).start();
 });
