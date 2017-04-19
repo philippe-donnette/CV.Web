@@ -10,7 +10,7 @@
     "tests"
   ],
   "devDependencies": {
-    "angular": "1.4.8",
+    "angular": "~1.4.8",
     "angular-bootstrap": "~1.0.3",
     "angular-ui-router": "~0.2.15",
     "bootstrap": "~3.3.6",
@@ -20,5 +20,8 @@
     "devicons": "~1.8.0",
     "angular-masonry": "~0.16.0",
     "get-size": "~2.0.2"
+  },
+  "resolutions":{
+    "angular": "1.4.8"
   }
 }
