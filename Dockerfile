@@ -1,5 +1,11 @@
-FROM httpd:2.4
+FROM node:latest
 
-COPY ./dist/ /usr/local/apache2/htdocs/
+RUN npm install -g http-server
+
+RUN mkdir /www
+WORKDIR /www
+
+COPY ./dist /www
 
 EXPOSE 5058
+CMD ["http-server", "-p", "5058"]
