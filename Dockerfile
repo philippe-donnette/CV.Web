@@ -1,5 +1,5 @@
-FROM nginx
+FROM httpd:2.4
 
-COPY ./dist /usr/share/nginx/html
+COPY ./dist/ /usr/local/apache2/htdocs/
 
 EXPOSE 5058
