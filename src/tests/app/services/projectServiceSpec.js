@@ -28,7 +28,7 @@
                     { id: 1, title: "An image 1" },
                     { id: 2, title: "An image title 2" }
                 ];
-            $httpBackend.expectGET('http://localhost:5000/api/project/1/images').respond(data);
+            $httpBackend.expectGET('http://localhost:5057/api/project/1/images').respond(data);
             projectService.getImages(1).then(function(response) {
                 expect(response).toEqual(data);
             }); 
@@ -44,7 +44,7 @@
                     { Id: 1, Name: "CV.Web" },
                     { Id: 2, Name: "Donola.CV" }
                 ];
-            $httpBackend.expectGET('http://localhost:5000/api/project/all').respond(data);
+            $httpBackend.expectGET('http://localhost:5057/api/project/all').respond(data);
             projectService.getProjects().then(function(response) {
                 expect(response).toEqual(data);
             }); 
@@ -57,7 +57,7 @@
         
         it("Testing getProject", function() {
             var data = { Id: 1, Name: "CV.Web" };
-            $httpBackend.expectGET('http://localhost:5000/api/project/1').respond(data);
+            $httpBackend.expectGET('http://localhost:5057/api/project/1').respond(data);
             projectService.getProject(1).then(function(response) {
                 expect(response).toEqual(data);
             }); 
@@ -73,7 +73,7 @@
                     { Id: 1, Name: "ASP.NET 5" },
                     { Id: 2, Name: "Angular2" }
                 ];
-            $httpBackend.expectGET('http://localhost:5000/api/project/1/skills').respond(data);
+            $httpBackend.expectGET('http://localhost:5057/api/project/1/skills').respond(data);
             projectService.getSkills(1).then(function(response) {
                 expect(response).toEqual(data);
             }); 

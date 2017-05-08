@@ -97,5 +97,5 @@ app.run(['$state', '$stateParams',
 
 
 app.constant('appSettings', {
-    apiUrl: 'http://localhost:5000/'
+    apiUrl: 'http://localhost:5057/'
 });

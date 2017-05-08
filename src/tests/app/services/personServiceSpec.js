@@ -26,7 +26,7 @@
         
         it("Testing getPerson", function() {
             var data = { id: 1, firstname: "Philippe", lastname: "Donnette" };
-            $httpBackend.expectGET('http://localhost:5000/api/person').respond(data);
+            $httpBackend.expectGET('http://localhost:5057/api/person').respond(data);
             personService.getPerson().then(function(response) {
                 expect(response).toEqual(data);
             }); 
@@ -42,7 +42,7 @@
                 { rotate: "x", imageFrontUrl: "card-contact.jpg", textFront: null, caption: "Family", captionIconClass: "fa fa-group", textBack: "Happy father of two, one boy Matti and one girl Leila", imageBackUrl: null },
                 { rotate: "y", imageFrontUrl: "card-contact.jpg", textFront: null, caption: "Location", captionIconClass: "fa fa-map-marker", textBack: "London SE8<br />United Kingdom", imageBackUrl: null }
             ];
-            $httpBackend.expectGET('http://localhost:5000/api/person/card/all').respond(data);
+            $httpBackend.expectGET('http://localhost:5057/api/person/card/all').respond(data);
             personService.getCards().then(function(response) {
                 expect(response).toEqual(data);
             }); 

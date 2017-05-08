@@ -29,7 +29,7 @@
                     { id: 1, provider: "scrum.org" },
                     { id: 2, provider: "janet" }
                 ];
-            $httpBackend.expectGET('http://localhost:5000/api/training/all').respond(data);
+            $httpBackend.expectGET('http://localhost:5057/api/training/all').respond(data);
             trainingService.getTrainings().then(function(response) {
                 expect(response).toEqual(data);
             }); 

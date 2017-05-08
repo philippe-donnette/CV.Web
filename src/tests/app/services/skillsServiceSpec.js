@@ -28,7 +28,7 @@
                     { Id: 1, Name: "ASP.NET 5" },
                     { Id: 2, Name: "Angular 2" }
                 ];
-            $httpBackend.expectGET('http://localhost:5000/api/skill/all').respond(data);
+            $httpBackend.expectGET('http://localhost:5057/api/skill/all').respond(data);
             skillsService.getSkills().then(function(response) {
                 expect(response).toEqual(data);
             }); 

@@ -28,7 +28,7 @@
                         { id: 1, companyName: "DOCDATA" },
                         { id: 2, companyName: "GROOVYTRAIN" }
                     ];
-                $httpBackend.expectGET('http://localhost:5000/api/experience/all').respond(data);
+                $httpBackend.expectGET('http://localhost:5057/api/experience/all').respond(data);
                 experienceService.getExperiences().then(function(response) {
                     expect(response).toEqual(data);
                 }); 
@@ -41,7 +41,7 @@
         
         it("Testing getExperience", function() {
                 var data = { id: 1, companyName: "DOCDATA" };
-                $httpBackend.expectGET('http://localhost:5000/api/experience/1').respond(data);
+                $httpBackend.expectGET('http://localhost:5057/api/experience/1').respond(data);
                 experienceService.getExperience(1).then(function(response) {
                     expect(response).toEqual(data);
                 }); 
@@ -57,7 +57,7 @@
                     { Id: 1, Name: "ASP.NET 5" },
                     { Id: 2, Name: "Angular2" }
                 ];
-            $httpBackend.expectGET('http://localhost:5000/api/experience/1/skills').respond(data);
+            $httpBackend.expectGET('http://localhost:5057/api/experience/1/skills').respond(data);
             experienceService.getSkills(1).then(function(response) {
                 expect(response).toEqual(data);
             }); 
