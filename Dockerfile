@@ -1,11 +1,16 @@
-FROM node:latest
+FROM nginx
+COPY nginx.conf /etc/nginx/conf.d/default.conf
+COPY dist /usr/share/nginx/html
 
-RUN npm install -g http-server
+#BELOW IS DOCKERFILE FOR A NODE SERVER
+#FROM node:latest
 
-RUN mkdir /www
-WORKDIR /www
+#RUN npm install -g http-server
 
-COPY ./dist /www
+#RUN mkdir /www
+#WORKDIR /www
 
-EXPOSE 5058
-CMD ["http-server", "-p", "5058"]
+#COPY ./dist /www
+
+#EXPOSE 5058
+#CMD ["http-server", "-p", "5058"]
