@@ -187,7 +187,7 @@ gulp.task('dist-build', function () {
 //START REPLACE @@apiUrl in app.js
 gulp.task('dist-replace-apiUrl', function () {
     return gulp.src(['./dist/app-*.js'])
-    .pipe(replace('http://localhost:5057/', 'http://cv-api.donola.net/'))
+    .pipe(replace('http://localhost:5057/', 'https://cv-api.donola.net/'))
     .pipe(gulp.dest('./dist')); 
 });
 //END REPLACE @@apiUrl in app.js 
